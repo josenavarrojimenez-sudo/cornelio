@@ -1,0 +1,575 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "cornelio",
+        "name": "Cornelio - CEO Virtual",
+        "workspace": "/root/.openclaw/workspace",
+        "agentDir": "/root/.openclaw/agents/cornelio/agent",
+        "default": true,
+        "sandbox": {
+          "mode": "off"
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "exec",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents",
+            "agentId",
+            "web_search",
+            "web_fetch",
+            "memory_search",
+            "memory_get",
+            "tts",
+            "image",
+            "process",
+            "sessions_yield"
+          ]
+        }
+      },
+      {
+        "id": "magnum",
+        "name": "Magnum - Brazo Derecho",
+        "workspace": "/root/.openclaw/workspace-magnum",
+        "agentDir": "/root/.openclaw/agents/magnum/agent",
+        "sandbox": {
+          "mode": "off"
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "exec",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents",
+            "agentId",
+            "web_search",
+            "web_fetch",
+            "memory_search",
+            "memory_get",
+            "tts",
+            "image",
+            "process"
+          ]
+        }
+      }
+    ],
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "models": {
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/z-ai/glm-5v-turbo": {},
+        "openrouter/z-ai/glm-5-turbo": {},
+        "openrouter/z-ai/glm-5": {},
+        "openrouter/z-ai/glm-4.7-flash": {},
+        "openrouter/z-ai/glm-4.7": {},
+        "openrouter/z-ai/glm-4.6v": {},
+        "openrouter/z-ai/glm-4.6": {},
+        "openrouter/z-ai/glm-4.5v": {},
+        "openrouter/z-ai/glm-4.5-air:free": {},
+        "openrouter/z-ai/glm-4.5-air": {},
+        "openrouter/z-ai/glm-4.5": {},
+        "openrouter/xiaomi/mimo-v2-pro": {},
+        "openrouter/xiaomi/mimo-v2-omni": {},
+        "openrouter/xiaomi/mimo-v2-flash": {},
+        "openrouter/x-ai/grok-code-fast-1": {},
+        "openrouter/x-ai/grok-4.20": {},
+        "openrouter/x-ai/grok-4.1-fast": {},
+        "openrouter/x-ai/grok-4-fast": {},
+        "openrouter/x-ai/grok-4": {},
+        "openrouter/x-ai/grok-3-mini-beta": {},
+        "openrouter/x-ai/grok-3-mini": {},
+        "openrouter/x-ai/grok-3-beta": {},
+        "openrouter/x-ai/grok-3": {},
+        "openrouter/stepfun/step-3.5-flash:free": {},
+        "openrouter/stepfun/step-3.5-flash": {},
+        "openrouter/relace/relace-search": {},
+        "openrouter/rekaai/reka-edge": {},
+        "openrouter/qwen/qwen3.6-plus:free": {},
+        "openrouter/qwen/qwen3.5-flash-02-23": {},
+        "openrouter/qwen/qwen3.5-plus-02-15": {},
+        "openrouter/qwen/qwen3.5-397b-a17b": {},
+        "openrouter/qwen/qwen3-vl-32b-instruct": {},
+        "openrouter/qwen/qwen3-next-80b-a3b-instruct:free": {},
+        "openrouter/qwen/qwen3-max-thinking": {},
+        "openrouter/qwen/qwen3-max": {},
+        "openrouter/qwen/qwen3-coder-plus": {},
+        "openrouter/qwen/qwen3-coder:free": {},
+        "openrouter/qwen/qwen3-coder": {},
+        "openrouter/qwen/qwen3-coder-30b-a3b-instruct": {},
+        "openrouter/openai/o4-mini-high": {},
+        "openrouter/openai/o4-mini-deep-research": {},
+        "openrouter/openai/o4-mini": {},
+        "openrouter/openai/o3-pro": {},
+        "openrouter/openai/o3-mini-high": {},
+        "openrouter/openai/o3-mini": {},
+        "openrouter/openai/o3-deep-research": {},
+        "openrouter/openai/gpt-oss-safeguard-20b": {},
+        "openrouter/openai/gpt-oss-20b:free": {},
+        "openrouter/openai/gpt-oss-20b": {},
+        "openrouter/openai/gpt-oss-120b:free": {},
+        "openrouter/openai/gpt-oss-120b": {},
+        "openrouter/openai/gpt-5.4-pro": {},
+        "openrouter/openai/gpt-5.4-nano": {},
+        "openrouter/openai/gpt-5.4-mini": {},
+        "openrouter/openai/gpt-5.4": {},
+        "openrouter/openai/gpt-5.3-codex": {},
+        "openrouter/openai/gpt-5.3-chat": {},
+        "openrouter/openai/gpt-5.2-codex": {},
+        "openrouter/openai/gpt-5.2-pro": {},
+        "openrouter/openai/gpt-5.2-chat": {},
+        "openrouter/openai/gpt-5.2": {},
+        "openrouter/openai/gpt-5.1-codex-mini": {},
+        "openrouter/openai/gpt-5.1-codex-max": {},
+        "openrouter/openai/gpt-5.1-codex": {},
+        "openrouter/openai/gpt-5.1-chat": {},
+        "openrouter/openai/gpt-5.1": {},
+        "openrouter/openai/gpt-5-pro": {},
+        "openrouter/openai/gpt-5-nano": {},
+        "openrouter/openai/gpt-5-mini": {},
+        "openrouter/openai/gpt-5-image-mini": {},
+        "openrouter/openai/gpt-5-image": {},
+        "openrouter/openai/gpt-5-codex": {},
+        "openrouter/openai/gpt-5": {},
+        "openrouter/openai/gpt-4o-mini-2024-07-18": {},
+        "openrouter/openai/gpt-4o-mini": {},
+        "openrouter/openai/gpt-4o-audio-preview": {},
+        "openrouter/openai/gpt-4o:extended": {},
+        "openrouter/openai/gpt-4o-2024-11-20": {},
+        "openrouter/openai/gpt-4o": {},
+        "openrouter/openai/gpt-4.1-nano": {},
+        "openrouter/openai/gpt-4.1-mini": {},
+        "openrouter/openai/gpt-4.1": {},
+        "openrouter/openai/gpt-4-turbo-preview": {},
+        "openrouter/openai/gpt-4-1106-preview": {},
+        "openrouter/openai/gpt-4-0314": {},
+        "openrouter/openai/gpt-4": {},
+        "openrouter/openai/gpt-audio": {},
+        "openrouter/nvidia/nemotron-nano-12b-v2-vl:free": {},
+        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {},
+        "openrouter/nvidia/nemotron-3-super-120b-a12b": {},
+        "openrouter/nvidia/nemotron-3-nano-30b-a3b:free": {},
+        "openrouter/nvidia/llama-3.3-nemotron-super-49b-v1.5": {},
+        "openrouter/nvidia/llama-3.1-nemotron-70b-instruct": {},
+        "openrouter/nex-agi/deepseek-v3.1-nex-n1": {},
+        "openrouter/moonshotai/kimi-k2.5": {},
+        "openrouter/moonshotai/kimi-k2-thinking": {},
+        "openrouter/moonshotai/kimi-k2-0905": {},
+        "openrouter/moonshotai/kimi-k2": {},
+        "openrouter/mistralai/mistral-saba": {},
+        "openrouter/mistralai/pixtral-large-2411": {},
+        "openrouter/mistralai/mixtral-8x7b-instruct": {},
+        "openrouter/mistralai/mixtral-8x22b-instruct": {},
+        "openrouter/mistralai/mistral-small-creative": {},
+        "openrouter/mistralai/mistral-small-2603": {},
+        "openrouter/mistralai/mistral-small-3.2-24b-instruct": {},
+        "openrouter/mistralai/mistral-nemo": {},
+        "openrouter/mistralai/mistral-large-2411": {},
+        "openrouter/mistralai/mistral-large-2407": {},
+        "openrouter/mistralai/mistral-large": {},
+        "openrouter/minimax/minimax-m2.7": {},
+        "openrouter/minimax/minimax-m2.5:free": {},
+        "openrouter/minimax/minimax-m2.5": {},
+        "openrouter/minimax/minimax-m2.1": {},
+        "openrouter/minimax/minimax-m2": {},
+        "openrouter/meta-llama/llama-4-scout": {},
+        "openrouter/meta-llama/llama-4-maverick": {},
+        "openrouter/meta-llama/llama-3.3-70b-instruct:free": {},
+        "openrouter/meta-llama/llama-3.3-70b-instruct": {},
+        "openrouter/meta-llama/llama-3.1-8b-instruct": {},
+        "openrouter/meta-llama/llama-3.1-70b-instruct": {},
+        "openrouter/meta-llama/llama-3-8b-instruct": {},
+        "openrouter/kwaipilot/kat-coder-pro-v2": {},
+        "openrouter/inception/mercury-coder": {},
+        "openrouter/inception/mercury-2": {},
+        "openrouter/inception/mercury": {},
+        "openrouter/google/gemma-4-31b-it": {},
+        "openrouter/google/gemma-4-26b-a4b-it": {},
+        "openrouter/google/gemini-3.1-pro-preview-customtools": {},
+        "openrouter/google/gemini-3.1-pro-preview": {},
+        "openrouter/google/gemini-3.1-flash-lite-preview": {},
+        "openrouter/google/gemini-3-flash-preview": {},
+        "openrouter/google/gemini-2.5-pro-preview": {},
+        "openrouter/google/gemini-2.5-pro-preview-05-06": {},
+        "openrouter/google/gemini-2.5-pro": {},
+        "openrouter/google/gemini-2.5-flash-lite-preview-09-2025": {},
+        "openrouter/google/gemini-2.5-flash-lite": {},
+        "openrouter/google/gemini-2.5-flash": {},
+        "openrouter/google/gemini-2.0-flash-lite-001": {},
+        "openrouter/google/gemini-2.0-flash-001": {},
+        "openrouter/free": {},
+        "openrouter/essentialai/rnj-1-instruct": {},
+        "openrouter/deepseek/deepseek-r1-0528": {},
+        "openrouter/deepseek/deepseek-r1": {},
+        "openrouter/deepseek/deepseek-v3.2-exp": {},
+        "openrouter/deepseek/deepseek-v3.2": {},
+        "openrouter/deepseek/deepseek-v3.1-terminus": {},
+        "openrouter/deepseek/deepseek-chat-v3.1": {},
+        "openrouter/deepseek/deepseek-chat-v3-0324": {},
+        "openrouter/cohere/command-r-plus-08-2024": {},
+        "openrouter/cohere/command-r-08-2024": {},
+        "openrouter/bytedance-seed/seed-2.0-mini": {},
+        "openrouter/bytedance-seed/seed-2.0-lite": {},
+        "openrouter/bytedance-seed/seed-1.6-flash": {},
+        "openrouter/bytedance-seed/seed-1.6": {},
+        "openrouter/baidu/ernie-4.5-vl-28b-a3b": {},
+        "openrouter/baidu/ernie-4.5-21b-a3b": {},
+        "openrouter/arcee-ai/virtuoso-large": {},
+        "openrouter/arcee-ai/trinity-mini:free": {},
+        "openrouter/anthropic/claude-sonnet-4.6": {},
+        "openrouter/anthropic/claude-sonnet-4.5": {},
+        "openrouter/anthropic/claude-sonnet-4": {},
+        "openrouter/anthropic/claude-opus-4.6": {},
+        "openrouter/anthropic/claude-opus-4.5": {},
+        "openrouter/anthropic/claude-opus-4.1": {},
+        "openrouter/anthropic/claude-opus-4": {},
+        "openrouter/anthropic/claude-haiku-4.5": {},
+        "openrouter/anthropic/claude-3.7-sonnet:thinking": {},
+        "openrouter/anthropic/claude-3.7-sonnet": {},
+        "openrouter/anthropic/claude-3.5-haiku": {},
+        "openrouter/anthropic/claude-3-haiku": {},
+        "openrouter/amazon/nova-pro-v1": {},
+        "openrouter/amazon/nova-premier-v1": {},
+        "openrouter/amazon/nova-micro-v1": {},
+        "openrouter/amazon/nova-lite-v1": {},
+        "openrouter/amazon/nova-2-lite-v1": {},
+        "openrouter/allenai/olmo-3.1-32b-instruct": {}
+      },
+      "model": {
+        "primary": "openrouter/auto",
+        "fallbacks": [
+          "openrouter/z-ai/glm-5v-turbo",
+          "openrouter/z-ai/glm-5-turbo",
+          "openrouter/z-ai/glm-5",
+          "openrouter/z-ai/glm-4.7-flash",
+          "openrouter/z-ai/glm-4.7",
+          "openrouter/z-ai/glm-4.6v",
+          "openrouter/z-ai/glm-4.6",
+          "openrouter/z-ai/glm-4.5v",
+          "openrouter/z-ai/glm-4.5-air:free",
+          "openrouter/z-ai/glm-4.5-air",
+          "openrouter/z-ai/glm-4.5",
+          "openrouter/xiaomi/mimo-v2-pro",
+          "openrouter/xiaomi/mimo-v2-omni",
+          "openrouter/xiaomi/mimo-v2-flash",
+          "openrouter/x-ai/grok-code-fast-1",
+          "openrouter/x-ai/grok-4.20",
+          "openrouter/x-ai/grok-4.1-fast",
+          "openrouter/x-ai/grok-4-fast",
+          "openrouter/x-ai/grok-4",
+          "openrouter/x-ai/grok-3-mini-beta",
+          "openrouter/x-ai/grok-3-mini",
+          "openrouter/x-ai/grok-3-beta",
+          "openrouter/x-ai/grok-3",
+          "openrouter/stepfun/step-3.5-flash:free",
+          "openrouter/stepfun/step-3.5-flash",
+          "openrouter/relace/relace-search",
+          "openrouter/rekaai/reka-edge",
+          "openrouter/qwen/qwen3.6-plus:free",
+          "openrouter/qwen/qwen3.5-flash-02-23",
+          "openrouter/qwen/qwen3.5-plus-02-15",
+          "openrouter/qwen/qwen3.5-397b-a17b",
+          "openrouter/qwen/qwen3-max-thinking",
+          "openrouter/qwen/qwen3-max",
+          "openrouter/qwen/qwen3-coder-plus",
+          "openrouter/qwen/qwen3-coder:free",
+          "openrouter/qwen/qwen3-coder",
+          "openrouter/openai/o4-mini-high",
+          "openrouter/openai/o4-mini-deep-research",
+          "openrouter/openai/o4-mini",
+          "openrouter/openai/o3-pro",
+          "openrouter/openai/o3-mini-high",
+          "openrouter/openai/o3-mini",
+          "openrouter/openai/o3-deep-research",
+          "openrouter/openai/gpt-5.4-pro",
+          "openrouter/openai/gpt-5.4-nano",
+          "openrouter/openai/gpt-5.4-mini",
+          "openrouter/openai/gpt-5.4",
+          "openrouter/openai/gpt-5.3-codex",
+          "openrouter/openai/gpt-5.3-chat",
+          "openrouter/openai/gpt-5.2-codex",
+          "openrouter/openai/gpt-5.2-pro",
+          "openrouter/openai/gpt-5.2-chat",
+          "openrouter/openai/gpt-5.2",
+          "openrouter/openai/gpt-5.1-codex-mini",
+          "openrouter/openai/gpt-5.1-codex-max",
+          "openrouter/openai/gpt-5.1-codex",
+          "openrouter/openai/gpt-5.1-chat",
+          "openrouter/openai/gpt-5.1",
+          "openrouter/openai/gpt-5-pro",
+          "openrouter/openai/gpt-5-nano",
+          "openrouter/openai/gpt-5-mini",
+          "openrouter/openai/gpt-5-image-mini",
+          "openrouter/openai/gpt-5-image",
+          "openrouter/openai/gpt-5-codex",
+          "openrouter/openai/gpt-5",
+          "openrouter/openai/gpt-4o-mini-2024-07-18",
+          "openrouter/openai/gpt-4o-mini",
+          "openrouter/openai/gpt-4o-audio-preview",
+          "openrouter/openai/gpt-4o:extended",
+          "openrouter/openai/gpt-4o-2024-11-20",
+          "openrouter/openai/gpt-4o",
+          "openrouter/openai/gpt-4.1-nano",
+          "openrouter/openai/gpt-4.1-mini",
+          "openrouter/openai/gpt-4.1",
+          "openrouter/openai/gpt-4-turbo-preview",
+          "openrouter/openai/gpt-4",
+          "openrouter/openai/gpt-audio",
+          "openrouter/nvidia/llama-3.3-nemotron-super-49b-v1.5",
+          "openrouter/nvidia/llama-3.1-nemotron-70b-instruct",
+          "openrouter/nex-agi/deepseek-v3.1-nex-n1",
+          "openrouter/moonshotai/kimi-k2.5",
+          "openrouter/moonshotai/kimi-k2-thinking",
+          "openrouter/moonshotai/kimi-k2-0905",
+          "openrouter/moonshotai/kimi-k2",
+          "openrouter/mistralai/mistral-saba",
+          "openrouter/mistralai/pixtral-large-2411",
+          "openrouter/mistralai/mixtral-8x7b-instruct",
+          "openrouter/mistralai/mixtral-8x22b-instruct",
+          "openrouter/mistralai/mistral-small-creative",
+          "openrouter/mistralai/mistral-small-2603",
+          "openrouter/mistralai/mistral-small-3.2-24b-instruct",
+          "openrouter/mistralai/mistral-nemo",
+          "openrouter/mistralai/mistral-large-2411",
+          "openrouter/mistralai/mistral-large-2407",
+          "openrouter/mistralai/mistral-large",
+          "openrouter/minimax/minimax-m2.7",
+          "openrouter/minimax/minimax-m2.5:free",
+          "openrouter/minimax/minimax-m2.5",
+          "openrouter/minimax/minimax-m2.1",
+          "openrouter/minimax/minimax-m2",
+          "openrouter/meta-llama/llama-4-scout",
+          "openrouter/meta-llama/llama-4-maverick",
+          "openrouter/meta-llama/llama-3.3-70b-instruct:free",
+          "openrouter/meta-llama/llama-3.3-70b-instruct",
+          "openrouter/meta-llama/llama-3.1-70b-instruct",
+          "openrouter/kwaipilot/kat-coder-pro-v2",
+          "openrouter/inception/mercury-coder",
+          "openrouter/inception/mercury-2",
+          "openrouter/inception/mercury",
+          "openrouter/google/gemma-4-31b-it",
+          "openrouter/google/gemini-3.1-pro-preview-customtools",
+          "openrouter/google/gemini-3.1-pro-preview",
+          "openrouter/google/gemini-3.1-flash-lite-preview",
+          "openrouter/google/gemini-3-flash-preview",
+          "openrouter/google/gemini-2.5-pro-preview",
+          "openrouter/google/gemini-2.5-pro-preview-05-06",
+          "openrouter/google/gemini-2.5-pro",
+          "openrouter/google/gemini-2.5-flash-lite-preview-09-2025",
+          "openrouter/google/gemini-2.5-flash-lite",
+          "openrouter/google/gemini-2.5-flash",
+          "openrouter/google/gemini-2.0-flash-lite-001",
+          "openrouter/google/gemini-2.0-flash-001",
+          "openrouter/free",
+          "openrouter/essentialai/rnj-1-instruct",
+          "openrouter/deepseek/deepseek-r1-0528",
+          "openrouter/deepseek/deepseek-r1",
+          "openrouter/deepseek/deepseek-v3.2-exp",
+          "openrouter/deepseek/deepseek-v3.2",
+          "openrouter/deepseek/deepseek-v3.1-terminus",
+          "openrouter/deepseek/deepseek-chat-v3.1",
+          "openrouter/deepseek/deepseek-chat-v3-0324",
+          "openrouter/cohere/command-r-plus-08-2024",
+          "openrouter/cohere/command-r-08-2024",
+          "openrouter/bytedance-seed/seed-2.0-mini",
+          "openrouter/bytedance-seed/seed-2.0-lite",
+          "openrouter/bytedance-seed/seed-1.6-flash",
+          "openrouter/bytedance-seed/seed-1.6",
+          "openrouter/baidu/ernie-4.5-vl-28b-a3b",
+          "openrouter/baidu/ernie-4.5-21b-a3b",
+          "openrouter/arcee-ai/virtuoso-large",
+          "openrouter/arcee-ai/trinity-mini:free",
+          "openrouter/anthropic/claude-sonnet-4.6",
+          "openrouter/anthropic/claude-sonnet-4.5",
+          "openrouter/anthropic/claude-sonnet-4",
+          "openrouter/anthropic/claude-opus-4.6",
+          "openrouter/anthropic/claude-opus-4.5",
+          "openrouter/anthropic/claude-opus-4.1",
+          "openrouter/anthropic/claude-opus-4",
+          "openrouter/anthropic/claude-haiku-4.5",
+          "openrouter/anthropic/claude-3.7-sonnet:thinking",
+          "openrouter/anthropic/claude-3.7-sonnet",
+          "openrouter/anthropic/claude-3.5-haiku",
+          "openrouter/anthropic/claude-3-haiku",
+          "openrouter/amazon/nova-pro-v1",
+          "openrouter/amazon/nova-premier-v1",
+          "openrouter/amazon/nova-micro-v1",
+          "openrouter/amazon/nova-lite-v1",
+          "openrouter/amazon/nova-2-lite-v1",
+          "openrouter/allenai/olmo-3.1-32b-instruct"
+        ]
+      },
+      "memorySearch": {
+        "qmd": {
+          "extraCollections": [
+            {
+              "path": "/root/.openclaw/agents/cornelio/sessions",
+              "name": "cornelio-sessions"
+            },
+            {
+              "path": "/root/.openclaw/agents/magnum/sessions",
+              "name": "magnum-sessions"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "9571bdaf4e5ce27cf257faef30160a887c664d61d41f5102"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": false,
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789",
+        "https://webchat.cornelio.app"
+      ]
+    },
+    "nodes": {
+      "denyCommands": [
+        "canvas.present",
+        "canvas.hide",
+        "canvas.navigate",
+        "canvas.eval",
+        "canvas.snapshot",
+        "canvas.a2ui.push",
+        "canvas.a2ui.pushJSONL",
+        "canvas.a2ui.reset"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "media": {
+      "audio": {
+        "enabled": true
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    }
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "selfChatMode": false,
+      "dmPolicy": "pairing",
+      "allowFrom": [
+        "+50672516680"
+      ],
+      "enabled": true
+    },
+    "telegram": {
+      "enabled": true,
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      }
+    }
+  },
+  "skills": {
+    "entries": {
+      "sag": {
+        "apiKey": "aa30f405ec0c1ce39707fbf76436b6c932474c6a5985a5693d363e87c1a899f0"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "magnum",
+      "match": {
+        "channel": "telegram"
+      }
+    },
+    {
+      "agentId": "magnum",
+      "match": {
+        "channel": "whatsapp",
+        "peer": {
+          "kind": "direct",
+          "id": "+50672516680"
+        }
+      }
+    }
+  ],
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-10T14:09:38.496Z",
+    "lastRunVersion": "2026.4.9",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-10T14:09:38.782Z"
+  },
+  "plugins": {
+    "entries": {
+      "openrouter": {
+        "enabled": true
+      },
+      "device-pair": {
+        "enabled": true,
+        "config": {
+          "publicUrl": "https://webchat.cornelio.app"
+        }
+      }
+    }
+  },
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "includeDefaultMemory": true
+    }
+  }
+}

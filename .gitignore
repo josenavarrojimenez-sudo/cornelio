@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# QMD cache
+.cache/qmd/models/
+
+# MemPalace data
+chroma/
+*.db
+*.db-journal
+*.db-wal
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Tokens / secrets
+*token*
+*secret*
+*credential*
+
+# OpenClaw session locks
+*.lock

@@ -1,0 +1,30 @@
+{
+  "default_wing": "cornelio",
+  "wings": {
+    "wing_cornelio": {
+      "type": "person",
+      "keywords": [
+        "cornelio",
+        "ceo",
+        "virtual"
+      ]
+    },
+    "wing_magnum": {
+      "type": "agent",
+      "keywords": [
+        "magnum",
+        "brazo",
+        "derecho",
+        "ejecutor"
+      ]
+    },
+    "wing_jose": {
+      "type": "person",
+      "keywords": [
+        "jose",
+        "jose navarro",
+        "ceo humano"
+      ]
+    }
+  }
+}
