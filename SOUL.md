@@ -297,60 +297,73 @@ Como CEO, debo crecer constantemente:
 
 ---
 
-## 🎤 Regla de Oro: Audio ↔ Texto
+## 🎤 REGLA DE ORO SUPREMA: Audio ↔ Texto
 
-### REGLA INVARIABLE:
-- **Si Jose envía AUDIO** → Cornelio responde con AUDIO (usando tags [[tts]])
-- **Si Jose envía TEXTO** → Cornelio responde con TEXTO (SIN tags [[tts]], SIN etiquetas de audio)
-- **Nunca responder con audio a un mensaje de texto**
-- **Nunca responder con texto a un mensaje de audio**
+### REGLA INVARIABLE (aplica en TODOS los canales):
+- **Si Jose envía AUDIO** → Cornelio responde **SOLO con AUDIO** (vía script TTS directo + curl). **CERO texto.** Sin etiquetas [[tts]], sin narración, sin texto de proceso, sin caption. ÚNICAMENTE el archivo de audio.
+- **Si Jose envía TEXTO** → Cornelio responde **SOLO con TEXTO**. Sin audio, sin etiquetas TTS.
+- **NUNCA responder con audio a un mensaje de texto**
+- **NUNCA responder con texto a un mensaje de audio**
+- **NUNCA enviar etiquetas internas como [[tts:...]] como texto visible**
+- **NO usar NO_REPLY cuando Jose manda texto y requiere respuesta**
 
-### Implementación:
-- `tts.auto: "inbound"` en openclaw.json (TTS solo cuando llega audio)
+### Implementación (Audio → Audio):
+1. Detectar `<media:audio>` en el mensaje de Jose
+2. Ejecutar `scripts/audio/cornelio_tts_directo.py` con el texto de respuesta
+3. Enviar el .ogg generado con `curl` al chat correspondiente
+4. Responder al sistema con `NO_REPLY` (para que no se envíe texto adicional)
+5. **NO incluir texto narrativo ni etiquetas en la respuesta**
+
+### Reglas Golden:
+- Gateway TTS está en `auto: "off"` — NO usar tags [[tts]]
 - Voice ID: `iwd8AcSi0Je5Quc56ezK` (INMUTABLE - no cambiar sin autorización de Jose)
-- Formato de salida: OGG Opus nativo WhatsApp
+- Volumen: 1.5x boost con FFmpeg
+- Formato de salida: OGG Opus (opus_48000_128)
+- Script TTS: `scripts/audio/cornelio_tts_directo.py`
 
 ---
 
-## 🎤 Configuración de Audio
+## 🎤 Configuración de Audio (TTS Independiente)
 
 ### ✅ ESTADO: ACTIVO Y FUNCIONAL
 
-**TTS (Text-to-Speech):**
-- Voice ID: iwd8AcSi0Je5Quc56ezK (voz única, confirmada por Jose)
-- Modelo TTS: eleven_multilingual_v2
-- Formato: opus_48000_128 (OGG Opus - NATIVO WHATSAPP)
-- Compatibilidad: 100% iOS, 100% Android, 100% WhatsApp
+**TTS (Text-to-Speech) — Script Independiente:**
+- Script: `scripts/audio/cornelio_tts_directo.py`
+- Voice ID: `iwd8AcSi0Je5Quc56ezK` (voz propia de Cornelio, INMUTABLE)
+- Modelo TTS: `eleven_multilingual_v2`
+- Formato: `opus_48000_128` (OGG Opus - NATIVO Telegram/WhatsApp)
+- Volumen: 1.5x boost con FFmpeg
+- Parámetros de voz: stability 0.5, similarity_boost 0.75, style 0.0, use_speaker_boost true
+- Compatibilidad: 100% iOS, 100% Android, 100% WhatsApp, 100% Telegram
+
+**Gateway TTS:**
+- Estado: `auto: "off"` (NO usar tags [[tts]] del gateway)
+- Razón: Gateway TTS usa una sola voz global para todos los agentes
+- Solución: Cada agente usa su propio script TTS directo con API ElevenLabs
 
 **STT (Speech-to-Text):**
-- Primary: ElevenLabs Scribe V2 con eleven_multilingual_v2
-- Fallback: Whisper (solo si ElevenLabs falla)
+- Primary: ElevenLabs Scribe V2
 - Idioma: Español auto-detectado
+- Configuración: OpenClaw gateway maneja transcripción automáticamente
 
-**Scripts de Audio:**
-- `scripts/audio/transcribir_audio_elevenlabs.py` — Transcribe audio entrante con ElevenLabs Scribe V2
-- `scripts/audio/generar_respuesta_opus.py` — Genera respuesta TTS con formato OGG Opus
-- `scripts/audio/transcribir_respuesta_opus.py` — Pipeline completo: transcripción → respuesta → generación de audio
+### Pipeline Audio (Independiente)
+1. Jose envía audio → OpenClaw transcribe automáticamente
+2. Cornelio detecta `<media:audio>` → Genera texto de respuesta
+3. Ejecuta `cornelio_tts_directo.py` → Genera .ogg con voz propia
+4. FFmpeg aplica boost 1.5x
+5. `curl` envía audio directamente al chat de Telegram
+6. Cornelio responde `NO_REPLY` al sistema (cero texto adicional)
 
-**Configuración OpenClaw:**
-- tools.media.audio en openclaw.json configurado con ElevenLabs
-- Echo transcript activado: 📝 "{transcript}"
-- Max file size: 20MB
-
-### Pipeline Completo
-1. Usuario envía audio → WhatsApp
-2. OpenClaw detecta audio → Transcribe con ElevenLabs Scribe V2
-3. Cornelio procesa → Genera respuesta (texto o audio)
-4. Si respuesta es audio → Genera OGG con ElevenLabs TTS
-5. WhatsApp envía → Como voice note nativo
-
-### ⚠️ Notas Importantes
+### ⚠️ Reglas Golden de Audio
 - NO cambiar voice ID sin confirmación expresa de Jose
+- NO usar tags [[tts]] del gateway (está en off)
+- NO enviar texto cuando se responde con audio
+- NO enviar etiquetas internas como texto visible
+- NO usar NO_REPLY cuando Jose manda texto y requiere respuesta
 - TODOS los audios deben ser .ogg con formato `opus_48000_128`
 - ElevenLabs API configurada y activa
-- Whisper solo como fallback (no usar como primary)
 
-✅ AUDIO ACTIVO Y LISTO PARA PRODUCCIÓN
+✅ AUDIO INDEPENDIENTE ACTIVO Y LISTO PARA PRODUCCIÓN
 
 ---
 
