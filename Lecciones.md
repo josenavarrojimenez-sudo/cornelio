@@ -20,6 +20,53 @@
 
 ---
 
+### 1.1 Identidad Vocal Independiente por Agente (2026-04-15)
+**Problema:** Cada agente necesita SU PROPIA voz (no compartir la misma).
+**Solución:** Crear `openclaw.json` independiente en CADA workspace con config TTS local.
+**Patrón Oficial:** https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/TTS_VOICE_CONFIGURATION.md
+
+**Archivos Creados:**
+```json
+// /root/.openclaw/workspace-magnum/openclaw.json
+{
+  "messages": {
+    "tts": {
+      "auto": "inbound",
+      "provider": "elevenlabs",
+      "providers": {
+        "elevenlabs": {
+          "apiKey": "aa30f405ec0c1ce39707fbf76436b6c932474c6a5985a5693d363e87c1a899f0",
+          "voiceId": "aviXFY7Zd7b9DnCUwaCh",
+          "modelId": "eleven_multilingual_v2",
+          "languageCode": "es"
+        }
+      }
+    }
+  }
+}
+```
+
+**Agentes Configurados:**
+| Agente | Voice ID | Workspace | Estado |
+|--------|----------|-----------|--------|
+| **Magnum** | `aviXFY7Zd7b9DnCUwaCh` | `/root/.openclaw/workspace-magnum/` | ✅ Activo |
+| **Flavia** | `p7AwDmKvTdoHTBuueGvP` | `/root/.openclaw/workspace-flavia/` | ✅ Activo |
+| **Cleo** | `MD6rLAhozcrmkdMZeOBt` | `/root/.openclaw/workspace-cleo/` | ✅ Activo |
+| **Cornelio** | `iwd8AcSi0Je5Quc56ezK` | Global (`auto: "off"`) | Script directo |
+
+**Lecciones:**
+- Cada agente tiene SU PROPIO `openclaw.json` en su workspace
+- Config `auto: "inbound"` habilita TTS automático cuando recibe audio
+- Voice ID único por agente = identidad vocal independiente
+- Gateway global puede quedar en `auto: "off"` (no interfiere)
+- **Requiere restart:** `openclaw gateway restart` después de crear configs
+
+**Referencias:**
+- https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/TTS_VOICE_CONFIGURATION.md
+- https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/MAGNUM_IDENTITY_INTEGRATION.md
+
+---
+
 ### 2. Bypass Anti-Bot de Uber Eats (2026-04-12)
 **Problema:** Uber Eats bloquea scraping con Cloudflare challenge + bot detection.
 **Solución:** Usar Playwright con mobile viewport + deep scroll technique.
