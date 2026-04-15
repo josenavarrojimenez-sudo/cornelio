@@ -11,7 +11,7 @@
 **Problema:** Gateway TTS usaba una sola voz global para todos los agentes.
 **Solución:** Crear scripts TTS independientes por agente con ElevenLabs API directa.
 **Archivos:**
-- `scripts/audio/cornelio_tts_directo.py` (Voice ID: iwd8AcSi0Je5Quc56ezK)
+- `scripts/audio/cornelio_tts_directo.py` (Voice ID: VAULT:1Password/ElevenLabs/Cornelio-Voice-ID)
 - `workspace-magnum/scripts/audio/magnum_tts_directo.py` (Voice ID: aviXFY7Zd7b9DnCUwaCh)
 **Lecciones:**
 - Gateway TTS `auto: "off"` para evitar conflictos
@@ -40,6 +40,26 @@
 - Texto → Texto (sin audio)
 - Modo Trabajo: Siempre texto (activado por Jose)
 - Nunca mezclar ambos en misma respuesta
+
+### 3.1 Envío de Audios por API de Telegram (2026-04-12)
+**Problema:** Las etiquetas `MEDIA:/ruta/archivo.ogg` en las respuestas de OpenClaw NO se renderizan como notas de voz en Telegram — aparecen como texto plano.
+**Solución:** Enviar el audio directamente usando curl con la API de Telegram:
+```bash
+curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
+  -F chat_id="<CHAT_ID>" \
+  -F voice="@/ruta/al/archivo.ogg"
+```
+**Implementación:**
+1. Generar audio con `scripts/audio/cornelio_tts_directo.py`
+2. Enviar por curl directo a Telegram (no usar标签 `MEDIA:`)
+3. El audio llega como nota de voz real (duration, mime_type, file_id)
+**Lecciones:**
+- OpenClaw no procesa automáticamente las etiquetas MEDIA: como archivos de voz
+- Siempre usar curl directo para enviar notas de voz en Telegram
+- Verificar que el archivo sea .ogg con formato opus_48000_128
+**Archivos Involucrados:**
+- `scripts/audio/cornelio_tts_directo.py` — generación de audio
+- `scripts/audio/generar_respuesta_opus.py` — script auxiliar
 
 ---
 

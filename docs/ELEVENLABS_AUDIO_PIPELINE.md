@@ -4,7 +4,7 @@
 **Usuario:** Jose Navarro (+50672516680)  
 **Fecha:** 2026-04-10  
 **Versión:** 2.0 (Ultra Detallada)  
-**Voice ID:** `iwd8AcSi0Je5Quc56ezK` (ÚNICA - PERMANENTE - NO CAMBIAR SIN AUTORIZACIÓN DE JOSE)
+**Voice ID:** `VAULT:1Password/ElevenLabs/Cornelio-Voice-ID` (ÚNICA - PERMANENTE - NO CAMBIAR SIN AUTORIZACIÓN DE JOSE)
 
 ---
 
@@ -105,8 +105,8 @@ PASO 13: OpenClaw envía audio al usuario por WhatsApp
 | Canal | Estado | ID |
 |-------|--------|-----|
 | **WhatsApp** | ✅ Activo | Baileys |
-| **Telegram (Cornelio)** | ✅ Activo | `8579844363:AAGMeemIv7tCvqv5d11kgCUGJgPHbVlxcIE` |
-| **Telegram (Magnum)** | ✅ Activo | `8562696632:AAEkhgiHhZBoOabjlh6Gw9AkbQHWtSx0mec` |
+| **Telegram (Cornelio)** | ✅ Activo | `VAULT:1Password/Telegram/Cornelio-Bot-Token` |
+| **Telegram (Magnum)** | ✅ Activo | `VAULT:1Password/Telegram/Magnum-Bot-Token` |
 | **WebChat** | ✅ Activo | `https://webchat.cornelio.app` |
 
 ### Plugins
@@ -134,7 +134,7 @@ PASO 13: OpenClaw envía audio al usuario por WhatsApp
       "providers": {
         "elevenlabs": {
           "apiKey": "aa30f405ec0c1ce39707fbf76436b6a5985a5693d363e87c1a899f0",
-          "voiceId": "iwd8AcSi0Je5Quc56ezK",
+          "voiceId": "VAULT:1Password/ElevenLabs/Cornelio-Voice-ID",
           "modelId": "eleven_v3",
           "languageCode": "es"
         }
@@ -149,7 +149,7 @@ PASO 13: OpenClaw envía audio al usuario por WhatsApp
 | `auto` | `"inbound"` | TTS SOLO cuando el mensaje entrante es audio |
 | `provider` | `"elevenlabs"` | Proveedor TTS |
 | `apiKey` | `aa30f4...899f0` | API Key ElevenLabs |
-| `voiceId` | `iwd8AcSi0Je5Quc56ezK` | Voz personalizada de Cornelio |
+| `voiceId` | `VAULT:1Password/ElevenLabs/Cornelio-Voice-ID` | Voz personalizada de Cornelio |
 | `modelId` | `eleven_v3` | Modelo TTS |
 | `languageCode` | `"es"` | Idioma |
 
@@ -453,7 +453,7 @@ Texto respuesta → OpenClaw detecta "inbound" → ElevenLabs TTS → Audio OGG 
 
 ### 7.2 Llamada API ElevenLabs TTS
 
-**Endpoint:** `POST https://api.elevenlabs.io/v1/text-to-speech/iwd8AcSi0Je5Quc56ezK`
+**Endpoint:** `POST https://api.elevenlabs.io/v1/text-to-speech/VAULT:1Password/ElevenLabs/Cornelio-Voice-ID`
 
 **Headers:**
 ```
@@ -504,7 +504,7 @@ if not ELEVENLABS_API_KEY:
         config = json.load(f)
         ELEVENLABS_API_KEY = config["skills"]["sag"]["apiKey"]
 
-VOICE_ID = "iwd8AcSi0Je5Quc56ezK"
+VOICE_ID = "VAULT:1Password/ElevenLabs/Cornelio-Voice-ID"
 MODEL = "eleven_multilingual_v2"
 
 def generar_audio(texto, output_path):
@@ -654,7 +654,7 @@ RESPONSE: 200 OK
 
 | Parámetro | Valor | Rango | Descripción |
 |-----------|-------|-------|-------------|
-| `voice_id` | `iwd8AcSi0Je5Quc56ezK` | - | Voz personalizada Cornelio |
+| `voice_id` | `VAULT:1Password/ElevenLabs/Cornelio-Voice-ID` | - | Voz personalizada Cornelio |
 | `stability` | 0.5 | 0.0-1.0 | Menos = más expresiva, Más = más consistente |
 | `similarity_boost` | 0.75 | 0.0-1.0 | Similitud con voz de referencia |
 | `style` | 0.0 | 0.0-1.0 | Exageración del estilo |
@@ -718,7 +718,7 @@ Si Jose envía TEXTO → Cornelio responde con TEXTO
 ### REGLA #3: Voice ID Inmutable
 
 ```
-Voice ID: iwd8AcSi0Je5Quc56ezK → NUNCA CAMBIAR SIN AUTORIZACIÓN DE JOSE
+Voice ID: VAULT:1Password/ElevenLabs/Cornelio-Voice-ID → NUNCA CAMBIAR SIN AUTORIZACIÓN DE JOSE
 ```
 
 ### REGLA #4: Formato OGG Opus
@@ -787,7 +787,7 @@ chmod +x /root/.openclaw/workspace-magnum/scripts/scribe_stt.sh
 |-------|--------|
 | 2026-04-08 | Configuración inicial ElevenLabs (Maximus) |
 | 2026-04-08 | Migración a OGG Opus (100% compatible WhatsApp) |
-| 2026-04-08 | Voice ID definitivo: iwd8AcSi0Je5Quc56ezK |
+| 2026-04-08 | Voice ID definitivo: VAULT:1Password/ElevenLabs/Cornelio-Voice-ID |
 | 2026-04-10 | Documento v1.0 creado (Jose) |
 | 2026-04-10 | Fix: tts.auto cambiado a "inbound" |
 | 2026-04-10 | Documento v2.0 ultra detallado (Cornelio) |
@@ -803,7 +803,7 @@ chmod +x /root/.openclaw/workspace-magnum/scripts/scribe_stt.sh
 | **STT Endpoint** | `/v1/speech-to-text` |
 | **TTS Provider** | ElevenLabs |
 | **TTS Endpoint** | `/v1/text-to-speech/{voice_id}` |
-| **Voice ID** | `iwd8AcSi0Je5Quc56ezK` |
+| **Voice ID** | `VAULT:1Password/ElevenLabs/Cornelio-Voice-ID` |
 | **TTS Model** | `eleven_v3` / `eleven_multilingual_v2` |
 | **Formato entrada** | OGG Opus (48kHz, mono) |
 | **Formato salida** | OGG Opus (48kHz, 128kbps, mono) |
@@ -815,5 +815,5 @@ chmod +x /root/.openclaw/workspace-magnum/scripts/scribe_stt.sh
 ---
 
 _Documento generado por Cornelio (CEO Virtual) para Cornelio.app_  
-_Voz: iwd8AcSi0Je5Quc56ezK (PERMANENTE)_  
+_Voz: VAULT:1Password/ElevenLabs/Cornelio-Voice-ID (PERMANENTE)_  
 _Flujo operativo y verificado el 2026-04-10_
