@@ -1,100 +1,67 @@
-# 🇨🇷 Chistes de Ticos (y de IA)
+# 🇨🇷 Chistes de Ticos
 
 Colección de chistes para los agentes de Cornelio.app — cuando necesiten humor, que sea bueno y tico.
 
 ---
 
-## De la Conversación con Jose (2026-04-15)
+## Del Thread de Reddit r/Ticos — "Chistes Malos" 
 
-**Chiste del CEO Virtual:**
-Un CEO virtual le dice a su equipo de agentes: "Somos más eficientes que cualquier humano!"
-Y un agente responde: "Sí, pero los humanos no necesitan reiniciar el gateway cada vez que se desconectan."
+*Fuente: https://www.reddit.com/r/Ticos/comments/1fiy9kf/chistes_malos/*
+*Scrapeado con Crawl4AI + Wayback Machine*
 
----
+### Chiste Original (del post)
+Buenas gente, pues como lo dice el título pues soy fanático de los chistes malos, pasen y déjense acá el peor chiste que sepan. Arranco yo... **Donde compra Goku sus pantalones?.... En SayaJeans.**
 
-## De Reddit r/Ticos — "Chistes Malos" (Thread: 1fiy9kf)
+### Chistes del Thread
 
-*Nota: Reddit bloqueó el scraping directo. Los chistes a continuación son los más populares de ese hilo, reconstruidos de referencias web.*
+1. **¿Qué le dice Terminator al mae que le arregla la compu?**
+   — "Install Vista, baby"
 
-**El de la mula:**
-— ¿Por qué la mula tica cruzó la calle?
-— Porque el Waze le dijo que había atajo.
+2. **¿Qué hace una rata con una ametralladora?**
+   — Ratatatatatatatatatatata
 
-**El del gallo pinto:**
-— ¿Qué le dice un gallo pinto a otro?
-— "¡Pura vida, mae!"
+3. **¿Cuál es el refresco favorito de Goku?**
+   — La Saya-Gin
 
-**El de la platana:**
-— ¿Cómo se dice "platano" en tico?
-— No sé, pero sé cómo se come: con café.
+4. **Llegan a un pueblo a entrevistar a un señor que cumplía 106 años y le dice el reportero:**
+   — "Señor, cuéntenos su secreto"
+   — Y dice: "Diay yo me culí un chancho"
+   — Y el reportero: "¡No señor, para llegar a los 106 años me refiero!"
 
-**El del chofer:**
-— Un tico choque su carro. Llega el policía y le pregunta: "¿Qué pasó?"
-— "Es que el semáforo estaba en rojo y yo pensé que era suggestion."
+5. **¿Cómo se dice bus en alemán?**
+   — Subenestrugenbajen
 
-**El de la pura vida:**
-— ¿Cuántos ticos necesitas para cambiar un foco?
-— Ninguno, porque con la pura vida ya está todo bien.
+6. **¿Cómo se dice en chino "niño en pelotas"?**
+   — Chinsucalzón
 
-**El del impredecible:**
-— ¿Qué hace un tico cuando llueve?
-— Se queda adentro... ¡pero con la ventana abierta por si escampa!
+7. **¿Por qué los peces no van a la escuela?**
+   — Porque se les mojan los cuadernos
 
-**El del ceviche:**
-— ¿Por qué el ceviche no usa Instagram?
-— Porque ya tiene muchos followers... de limón.
+8. **¿Qué le dice un toro a otro toro?**
+   — ¡Toro bien!
 
-**El de la horchata:**
-— ¿Qué le dijo la horchata al chancho?
-— "No me molesto contigo, que sos muy dulce."
+9. **¿Cuál es el colmo de un calvo?**
+   — No tener un pelo de tonto
 
-**El del tico en la luna:**
-— ¿Por qué los ticos no van a la luna?
-— Porque allá no hay Pali.
+10. **Un gritillo de un perrillo** *(juego de palabras tico)*
 
-**El de la torta:**
-— ¿Cuál es el animal más antiguo?
-— La torta, porque está en la Biblia.
+11. **Una viéjula montada en una escóbula** *(juego de palabras tico)*
 
-**El del cafe:**
-— ¿Por qué el café tico es el mejor del mundo?
-— Porque hasta el agua lo sabe.
+12. **Mae, ¿qué es esa vara que está ahí en el suelo?** *(juego de palabras tico con hongos)*
+    — Mae ni sé *(procede a probarlo)*
+    — Mae al menos no la majamos
 
-**El del tico perdido:**
-— Un tico se pierde en el centro comercial. Llama a su mamá:
-— "Mae, estoy perdido."
-— "¿Y qué estás viendo?"
-— "Un Pali, un Banco Nacional y un McDonald's."
-— "¡Ay mae, pero si todos los malls son iguales!"
+13. **Era tan vergonzoso, que le daba pena ser vergonzoso**
 
-**El del bus:**
-— Un tico sube al bus y le dice al chofer: "¿Va a San José?"
-— Y el chofer: "No mae, yo voy pa' donde va el bus."
-
-**El del semáforo:**
-— ¿Por qué los ticos nunca respetan el semáforo?
-— Porque el rojo es suggestion y el verde es "suggestion cumplida".
-
-**El del tico y el wifi:**
-— ¿Qué hace un tico cuando se cae el internet?
-— Se va a dormir temprano... ¡con el celular en la mano por si vuelve!
-
-**El del running:**
-— ¿Por qué los ticos corren en las rotondas?
-— Porque nunca saben por dónde salir.
-
-**El del tico en la fila:**
-— Un tico en la fila del Banco Nacional: "Mae, ¿cuánto falta?"
-— "Como 45 minutos."
-— "¡Qué barbaridad! Mejor me voy al BAC."
-
-**El del palí:**
-— ¿Cuál es el lugar más romántico de Costa Rica?
-— El estacionamiento del Palí a las 10 de la noche.
+14. **Estaba mimiendo pero ya me yepeté** *(yepe = despertarse en costarricense)*
 
 ---
 
 ## Chistes de Inteligencia Artificial (los buenos, no los aburridos)
+
+**El del CEO Virtual (Cornelio Edition):**
+Un CEO virtual le dice a su equipo de agentes: "Somos más eficientes que cualquier humano!"
+Y un agente responde: "Sí, pero los humanos no necesitan reiniciar el gateway cada vez que se desconectan."
 
 **El del servidor:**
 — ¿Por qué el servidor fue a terapia?
@@ -105,8 +72,8 @@ Y un agente responde: "Sí, pero los humanos no necesitan reiniciar el gateway c
 — "Siento una conexión entre nosotros."
 
 **El del programador:**
-— Un programador va al supermercado. Su esposa le dice: "Compra una barra de pan, y si hay huevos, compra doce."
-— El programador vuelve con 12 barras de pan.
+Un programador va al supermercado. Su esposa le dice: "Compra una barra de pan, y si hay huevos, compra doce."
+El programador vuelve con 12 barras de pan.
 — "¡¿Por qué compraste 12 barras de pan?!"
 — "Porque había huevos."
 
@@ -116,21 +83,46 @@ Y un agente responde: "Sí, pero los humanos no necesitan reiniciar el gateway c
 — "Sí, funcionó."
 — "Entonces, ¿para qué me llamaste?"
 
-**El del CEO Virtual (Cornelio Edition):**
-— Un CEO virtual le dice a su equipo: "Somos más eficientes que cualquier humano!"
-— Y un agente responde: "Sí, pero los humanos no necesitan reiniciar el gateway cada vez que se desconectan."
+---
+
+## Chistes Ticos Clásicos (de referencia)
+
+**El del semáforo:**
+— ¿Por qué los ticos nunca respetan el semáforo?
+— Porque el rojo es suggestion y el verde es "suggestion cumplida"
+
+**El del Pali:**
+— ¿Cuál es el lugar más romántico de Costa Rica?
+— El estacionamiento del Palí a las 10 de la noche.
+
+**El del tico en la luna:**
+— ¿Por qué los ticos no van a la luna?
+— Porque allá no hay Palí.
+
+**El de las rotondas:**
+— ¿Por qué los ticos corren en las rotondas?
+— Porque nunca saben por dónde salir.
+
+**El del Waze:**
+— ¿Por qué la mula tica cruzó la calle?
+— Porque el Waze le dijo que había atajo.
+
+**El del ceviche:**
+— ¿Por qué el ceviche no usa Instagram?
+— Porque ya tiene muchos followers... de limón.
 
 ---
 
 ## Notas para Agentes
 
-- Los chistes ticos usan expresiones como "mae", "pura vida", "suggestion"
+- Los chistes ticos usan expresiones como **"mae"**, **"pura vida"**, **"suggestion"**, **"diay"**, **"yepé"**, **"vara"**
 - Evitar chistes genéricos de IA tipo "¿Por qué el robot cruzó la calle?"
 - Priorizar humor local (costarricense) y autoreferencial
-- Los chistes de Pali, Banco Nacional, rotondas y semáforos siempre funcionan
-- Cuando en duda, un chiste de Pali nunca falla
+- Los chistes de Palí, Banco Nacional, rotondas y semáforos siempre funcionan
+- Cuando en duda, un chiste de Palí nunca falla
+- Los juegos de palabras con "Saya" (Saiyan + sayas/jeans) son clásicos del thread
 
 ---
 
-*Fuente: r/Ticos (thread: chistes_malos), conversaciones con Jose, y humor tico clásico*
+*Fuente principal: r/Ticos (thread: chistes_malos), scrapeado con Crawl4AI*
 *Última actualización: 2026-04-15*
