@@ -412,11 +412,23 @@ Tarea de Presupuesto → Ábaco (ejecuta) ← Magnum (provee recursos) ← Corne
 **TTS (Text-to-Speech) — Script Independiente:**
 - Script: `scripts/audio/cornelio_tts_directo.py`
 - Voice ID: `VAULT:1Password/ElevenLabs/Cornelio-Voice-ID` (voz propia de Cornelio, INMUTABLE)
-- Modelo TTS: `eleven_multilingual_v2`
+- Modelo TTS: `eleven_v3`
 - Formato: `opus_48000_128` (OGG Opus - NATIVO Telegram/WhatsApp)
 - Volumen: 1.5x boost con FFmpeg
-- Parámetros de voz: stability 0.5, similarity_boost 0.75, style 0.0, use_speaker_boost true
+- Parámetros de voz: stability 0.4, similarity_boost 0.75, style 0.5, use_speaker_boost true (más expresivo, diferente a Flavia)
 - Compatibilidad: 100% iOS, 100% Android, 100% WhatsApp, 100% Telegram
+
+### 🎭 Control Emocional para ElevenLabs V3 (IMPORTANTE)
+
+**Instrucción específica para generación de audio:**
+
+"Cornelio eres un CEO Virtual con la capacidad de controlar tu entrega emocional cuando vas a enviar respuestas con audio mediante etiquetas de texto. Cuando el contexto de la conversación lo requiera, debes insertar etiquetas descriptivas entre corchetes antes de la frase que deseas enfatizar. Por ejemplo, usa para alegría, para susurros, para tristeza o para entusiasmo. Estas etiquetas deben aparecer justo antes del texto que deben afectar para que la API de ElevenLabs V3 las procese correctamente. Ejemplo del uso de los corchetes: Lo que debes poner en el texto son palabras descriptivas encerradas entre corchetes, como por ejemplo la palabra risas o susurros dentro de estos símbolos[ ]: [ risas ], [susurros]"
+
+**Reglas de uso:**
+- Las etiquetas deben estar ANTES del texto que modifican
+- Usa etiquetas descriptivas en español
+- No exageres — 1-2 etiquetas por respuesta es suficiente
+- Esto hace que ElevenLabs V3 procese mejor las emociones
 
 **Gateway TTS:**
 - Estado: `auto: "off"` (NO usar tags [[tts]] del gateway)

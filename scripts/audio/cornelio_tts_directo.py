@@ -11,14 +11,14 @@ from datetime import datetime
 
 # --- CONFIGURACIÓN DE CORNELIO ---
 VOICE_ID = "iwd8AcSi0Je5Quc56ezK"  # Identidad vocal de Cornelio
-MODEL_ID = "eleven_multilingual_v2"  # Modelo de alta calidad
+MODEL_ID = "eleven_v3"  # Modelo de alta calidad
 OUTPUT_FORMAT = "opus_48000_128"  # Formato nativo WhatsApp/Telegram
 
 # Parámetros de voz ajustables (Personalidad de Cornelio)
 VOICE_SETTINGS = {
-    "stability": 0.5,  # 0.0 a 1.0 (Balanceado)
+    "stability": 0.4,  # 0.4 - Más expresivo/variable
     "similarity_boost": 0.75,  # 0.0 a 1.0 (Fiel a la voz original)
-    "style": 0.0,  # 0.0 a 1.0 (Natural, sin exageración)
+    "style": 0.5,  # 0.5 - Más expresión emocional con corchetes [ ]
     "use_speaker_boost": True  # Refuerza la claridad
 }
 
