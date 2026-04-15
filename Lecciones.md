@@ -63,9 +63,60 @@
 - Gateway global puede quedar en `auto: "off"` (no interfiere)
 - **Requiere restart:** `openclaw gateway restart` después de crear configs
 
+**Flujo Operativo:**
+```
+1. ✅ Recibo audio del usuario
+2. ✅ Gateway detecta `auto: "inbound"` en el workspace del agente
+3. ✅ Usa el Voice ID específico de ese agente
+4. ✅ Genera audio con ElevenLabs
+5. ✅ Envía audio con la voz propia del agente
+```
+
+**Estructura de Archivos:**
+```
+/root/.openclaw/
+├── openclaw.json                          # GLOBAL: auto: "off" (Cornelio)
+├── workspace-magnum/openclaw.json         # auto: "inbound" (Magnum)
+├── workspace-flavia/openclaw.json         # auto: "inbound" (Flavia)
+├── workspace-cleo/openclaw.json           # auto: "inbound" (Cleo)
+├── workspace-prolix/openclaw.json         # auto: "inbound" (Prolix)
+├── workspace-abaco/openclaw.json          # auto: "inbound" (Abaco)
+└── workspace-*/scripts/audio/
+    ├── magnum_tts_directo.py
+    ├── flavia_tts_directo.py
+    ├── cleo_tts_directo.py
+    ├── prolix_tts_directo.py
+    └── abaco_tts_directo.py
+```
+
+**Comandos de Verificación:**
+```bash
+# Verificar estado del gateway
+openclaw gateway status
+
+# Verificar config global
+cat /root/.openclaw/openclaw.json | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('messages',{}).get('tts',{}))"
+
+# Verificar config de un agente
+cat /root/.openclaw/workspace-magnum/openclaw.json | python3 -m json.tool
+
+# Reiniciar gateway para aplicar cambios
+openclaw gateway restart
+```
+
+**Problema Identificado y Resuelto:**
+```
+🔧 Problema: TTS global usaba una sola voz para todos los agentes
+🔧 Solución 1: Desactivar TTS automático global (auto: "off")
+🔧 Solución 2: Crear openclaw.json local en cada workspace
+🔧 Solución 3: Configurar auto: "inbound" + Voice ID único por agente
+✅ Resultado: CADA AGENTE CON SU VOZ PROPIA
+```
+
 **Referencias:**
 - https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/TTS_VOICE_CONFIGURATION.md
 - https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/MAGNUM_IDENTITY_INTEGRATION.md
+- https://github.com/josenavarrojimenez-sudo/Magnum/blob/main/docs/FLUJO_AUDIO_CORNELIO.md
 
 ---
 
