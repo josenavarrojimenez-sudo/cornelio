@@ -18,6 +18,33 @@
 - FFmpeg boost 1.5x para volumen adecuado
 - Formato OGG Opus nativo para Telegram/WhatsApp
 
+### 2. Voice ID Global Override - Patrón Magnum (2026-04-15)
+**Problema:** Per-workspace `openclaw.json` con `auto: "inbound"` y `voiceId` NO funciona. El gateway ignora la Voice ID del workspace y usa la global por defecto.
+**Root Cause:** Cuando `auto: "inbound"` está activo, el gateway busca la configuración global de TTS y usa el `voiceId` global (Cornelio: `iwd8AcSi0Je5Quc56ezK`), ignorando por completo el `voiceId` del workspace.
+**Solución definitiva (Patrón Magnum):**
+1. Global TTS: `auto: "off"` en `/root/.openclaw/openclaw.json`
+2. Per-workspace: `auto: "off"` en cada `workspace-{agente}/openclaw.json`
+3. Cada agente usa su PROPIO script TTS Python (`{agente}_tts_directo.py`) que llama directamente a ElevenLabs API con su Voice ID única
+4. Cada agente tiene un script bash (`{agente}_enviar_audio.sh`) que: genera el audio + lo envía via curl al bot de Telegram del agente
+5. El agente responde `NO_REPLY` al sistema para que no envíe texto adicional
+
+**Voice IDs por agente:**
+| Agente | Voice ID | Script TTS |
+|--------|----------|------------|
+| Cornelio | iwd8AcSi0Je5Quc56ezK | cornelio_tts_directo.py |
+| Magnum | aviXFY7Zd7b9DnCUwaCh | magnum_tts_directo.py |
+| Flavia | a0MaQpDjx7p7bZmqzFp1 | flavia_tts_directo.py |
+| Prolix | HJZsH9Tm3FtUeJzIjWVE | prolix_tts_directo.py |
+| Ábaco | kulszILr6ees0ArU8miO | abaco_tts_directo.py |
+| Cleo | MD6rLAhozcrmkdMZeOBt | cleo_tts_directo.py |
+
+**Lecciones:**
+- `auto: "inbound"` en per-workspace NO funciona para voice independence
+- El gateway SIEMPRE usa la Voice ID global cuando auto está activo
+- La ÚNICA solución es bypass total del gateway: script propio + curl + NO_REPLY
+- NO usar `[[tts]]` tags del gateway (está en auto: off)
+- Cada agente DEBE usar su propio bot token de Telegram para enviar audio
+
 ---
 
 ### 1.1 Identidad Vocal Independiente por Agente (2026-04-15)

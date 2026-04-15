@@ -30,7 +30,7 @@ def obtener_api_key():
         try:
             with open("/root/.openclaw/openclaw.json", "r") as f:
                 config = json.load(f)
-                key = config["skills"]["sag"]["apiKey"]
+                key = config["skills"]["entries"]["sag"]["apiKey"]
         except:
             pass
     return key
