@@ -50,26 +50,35 @@
 | Agente | Voice ID | Workspace | Estado |
 |--------|----------|-----------|--------|
 | **Magnum** | `aviXFY7Zd7b9DnCUwaCh` | `/root/.openclaw/workspace-magnum/` | ✅ Activo |
-| **Flavia** | `p7AwDmKvTdoHTBuueGvP` | `/root/.openclaw/workspace-flavia/` | ✅ Activo |
+| **Flavia** | `a0MaQpDjx7p7bZmqzFp1` | `/root/.openclaw/workspace-flavia/` | ✅ Activo |
 | **Cleo** | `MD6rLAhozcrmkdMZeOBt` | `/root/.openclaw/workspace-cleo/` | ✅ Activo |
 | **Prolix** | `HJZsH9Tm3FtUeJzIjWVE` | `/root/.openclaw/workspace-prolix/` | ✅ Activo |
 | **Abaco** | `kulszILr6ees0ArU8miO` | `/root/.openclaw/workspace-abaco/` | ✅ Activo |
-| **Cornelio** | `iwd8AcSi0Je5Quc56ezK` | Global (`auto: "off"`) | Script directo |
+| **Cornelio** | `iwd8AcSi0Je5Quc56ezK` | `/root/.openclaw/workspace/` | ✅ Activo (`auto: "inbound"`) |
 
 **Lecciones:**
 - Cada agente tiene SU PROPIO `openclaw.json` en su workspace
 - Config `auto: "inbound"` habilita TTS automático cuando recibe audio
 - Voice ID único por agente = identidad vocal independiente
-- Gateway global puede quedar en `auto: "off"` (no interfiere)
+- Gateway global queda en `auto: "off"` (Cornelio ahora tiene su propio openclaw.json con `auto: "inbound"`)
+- Script TTS directo como fallback si el gateway no procesa el audio
 - **Requiere restart:** `openclaw gateway restart` después de crear configs
 
-**Flujo Operativo:**
+**Flujo Operativo (2 caminos):**
 ```
-1. ✅ Recibo audio del usuario
+Camino 1 - Gateway TTS (auto: "inbound"):
+1. ✅ Agente recibe audio del usuario
 2. ✅ Gateway detecta `auto: "inbound"` en el workspace del agente
 3. ✅ Usa el Voice ID específico de ese agente
-4. ✅ Genera audio con ElevenLabs
+4. ✅ Genera audio con ElevenLabs automáticamente
 5. ✅ Envía audio con la voz propia del agente
+
+Camino 2 - Script TTS directo (fallback/manual):
+1. ✅ Recibo audio del usuario
+2. ✅ Genero texto de respuesta
+3. ✅ Ejecuto script TTS directo (cornelio_tts_directo.py, flavia_tts_directo.py, etc.)
+4. ✅ Envío .ogg por curl a Telegram Bot API
+5. ✅ Respondo NO_REPLY al sistema
 ```
 
 **Estructura de Archivos:**
