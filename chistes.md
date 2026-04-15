@@ -2,58 +2,72 @@
 
 Colección de chistes para los agentes de Cornelio.app — cuando necesiten humor, que sea bueno y tico.
 
+*Fuente: https://www.reddit.com/r/Ticos/comments/1fiy9kf/chistes_malos/ (Scrapeado con Crawl4AI)*
+
 ---
 
-## Del Thread de Reddit r/Ticos — "Chistes Malos" 
+## Del Thread de Reddit r/Ticos — "Chistes Malos"
 
-*Fuente: https://www.reddit.com/r/Ticos/comments/1fiy9kf/chistes_malos/*
-*Scrapeado con Crawl4AI + Wayback Machine*
+### Post Original (por u/Intelligent_Chicken6)
+Buenas gente, pues como lo dice el título pues soy fanático de los chistes malos, pasen y déjense acá el peor chiste que sepan. Arranco yo... **¿Donde compra Goku sus pantalones?.... En SayaJeans.**
 
-### Chiste Original (del post)
-Buenas gente, pues como lo dice el título pues soy fanático de los chistes malos, pasen y déjense acá el peor chiste que sepan. Arranco yo... **Donde compra Goku sus pantalones?.... En SayaJeans.**
+### Comentarios/Chistes del Thread
 
-### Chistes del Thread
+1. **¿Qué hace una rata con una ametralladora?** — ¡Ratatatatatatatatatata! *(u/Intelligent_Chicken6, u/turcopo)*
 
-1. **¿Qué le dice Terminator al mae que le arregla la compu?**
-   — "Install Vista, baby"
+2. **¿Cuál es el refresco favorito de Goku?** — La Saya-Gin *(u/_t0xic_006)*
 
-2. **¿Qué hace una rata con una ametralladora?**
-   — Ratatatatatatatatatatata
+3. **¿Qué le dice Terminator al mae que le arregla la compu?** — "Install Vista, baby" *(u/_t0xic_006)*
 
-3. **¿Cuál es el refresco favorito de Goku?**
-   — La Saya-Gin
+4. **Llegan a un pueblo a entrevistar a un señor que cumplía 106 años y le dice el reportero:** "Señor, cuéntenos su secreto" y dice: "Diay yo me culí un chancho" y el reportero: "¡No señor, para llegar a los 106 años me refiero!"** *(u/espitiru)*
 
-4. **Llegan a un pueblo a entrevistar a un señor que cumplía 106 años y le dice el reportero:**
-   — "Señor, cuéntenos su secreto"
-   — Y dice: "Diay yo me culí un chancho"
-   — Y el reportero: "¡No señor, para llegar a los 106 años me refiero!"
+5. **¿Cómo se dice bus en alemán?** — Subenestrugenbajen
 
-5. **¿Cómo se dice bus en alemán?**
-   — Subenestrugenbajen
+6. **¿Cómo se dice en chino "niño en pelotas"?** — Chinsucalzón
 
-6. **¿Cómo se dice en chino "niño en pelotas"?**
-   — Chinsucalzón
+7. **¿Por qué los peces no van a la escuela?** — Porque se les mojan los cuadernos
 
-7. **¿Por qué los peces no van a la escuela?**
-   — Porque se les mojan los cuadernos
+8. **¿Qué le dice un toro a otro toro?** — ¡Toro bien!
 
-8. **¿Qué le dice un toro a otro toro?**
-   — ¡Toro bien!
+9. **¿Cuál es el colmo de un calvo?** — No tener un pelo de tonto
 
-9. **¿Cuál es el colmo de un calvo?**
-   — No tener un pelo de tonto
+10. **Cuando estés triste, agarrá un zapato. Un zapato consuela.** (juego de palabras: shoe/cshoe = consuela) *(u/Intelligent_Chicken6)*
 
-10. **Un gritillo de un perrillo** *(juego de palabras tico)*
+11. **¿Qué es un circuito?** — Un lugar donde hay payasos y elefantes... (circo = circuito) *(u/Intelligent_Chicken6)*
 
-11. **Una viéjula montada en una escóbula** *(juego de palabras tico)*
+12. **¿Cuál es el nombre del hermano mayor de Pinocho?** — Pinueve *(u/indian_85)*
 
-12. **Mae, ¿qué es esa vara que está ahí en el suelo?** *(juego de palabras tico con hongos)*
-    — Mae ni sé *(procede a probarlo)*
-    — Mae al menos no la majamos
+13. **¿Cuál es el nombre del bumerán que no vuelve?** — Palo. *(u/sunintheradio, Top 1% Commenter)*
 
-13. **Era tan vergonzoso, que le daba pena ser vergonzoso**
+14. **¿Qué le dice un globo a otro?** — Cuidado con el cactussssss..... *(u/jonpagecr)*
 
-14. **Estaba mimiendo pero ya me yepeté** *(yepe = despertarse en costarricense)*
+15. **¿Qué le dice un pez a otro?** — Nada. *(u/yohasue, Top 1% Commenter)*
+
+16. **El chile más malo, el que se bajó de la rama para pegarle a los chilitos 🥺** *(u/Quirky-Ad-9109)*
+   - **Había uno más malo, se bajó de la rama y lo arrancó.** *(u/Elegido_uiui)*
+
+17. **Había un maestro tan, tan gordo que cuando se enfermaba no le daba fiebre, sino calentamiento global.** *(u/yohasue, Top 1% Commenter)*
+
+18. **Había un maestro que era tan gordo que se cayó de ambos lados de la cama.** *(u/[deleted])*
+
+19. **Cuando te estés ahogando... Llorá. Porque llorar deja salir vapor.** (juego de palabras con "cry" / "steam") *(u/Intelligent_Chicken6)*
+
+20. **Había un perrito que tenía una sola pata, se iba a rascar y se caía.** *(u/Elegido_uiui)*
+
+21. **¿Qué es un ladrillo?** — Un grito de un perrito *(juego de palabras tico: "un gritillo de un perrillo")* *(u/[deleted])*
+
+22. **¿Sabés por qué sé que tu compu pesa 5 kilos?** — Porque la PC *(u/Agreeable-Initial-91)*
+
+23. **Dos mae (1 y 2) van caminando:**
+   - Mae, ¿qué es esa vara ahí en el suelo?
+   - Mae ni sé *(procede a probarlo)*
+   - Mae es caca
+   - Mae al menos no la majamos
+   *(u/[deleted])*
+
+24. **El chiste más malo que hizo el post... era tan vergonzoso, que le daba pena ser vergonzoso.**
+
+25. **Chocobollo** *(u/Illustrious_Log_4472 — una sola palabra, puro humor tico)*
 
 ---
 
@@ -91,7 +105,7 @@ El programador vuelve con 12 barras de pan.
 — ¿Por qué los ticos nunca respetan el semáforo?
 — Porque el rojo es suggestion y el verde es "suggestion cumplida"
 
-**El del Pali:**
+**El del Palí:**
 — ¿Cuál es el lugar más romántico de Costa Rica?
 — El estacionamiento del Palí a las 10 de la noche.
 
@@ -115,14 +129,17 @@ El programador vuelve con 12 barras de pan.
 
 ## Notas para Agentes
 
-- Los chistes ticos usan expresiones como **"mae"**, **"pura vida"**, **"suggestion"**, **"diay"**, **"yepé"**, **"vara"**
+- Los chistes ticos usan expresiones como **"mae"**, **"pura vida"**, **"suggestion"**, **"diay"**, **"yepé"**, **"vara"**, **"chunche"**
+- Los juegos de palabras con "Saya" (Saiyan + sayas/jeans) son clásicos del thread
+- "Chocobollo" es humor tico puro — una sola palabra que lo dice todo
+- Los chistes de "había un..." son un formato clásico costarricense
+- "Un gritillo de un perrillo" es juego de palabras fonético (ladrillo = gritillo + perrillo)
 - Evitar chistes genéricos de IA tipo "¿Por qué el robot cruzó la calle?"
 - Priorizar humor local (costarricense) y autoreferencial
-- Los chistes de Palí, Banco Nacional, rotondas y semáforos siempre funcionan
 - Cuando en duda, un chiste de Palí nunca falla
-- Los juegos de palabras con "Saya" (Saiyan + sayas/jeans) son clásicos del thread
 
 ---
 
-*Fuente principal: r/Ticos (thread: chistes_malos), scrapeado con Crawl4AI*
-*Última actualización: 2026-04-15*
+*Fuente principal: r/Ticos (thread: chistes_malos por u/Intelligent_Chicken6)*
+*Scrapeado con Crawl4AI — 2026-04-15*
+*GitHub: github.com/josenavarrojimenez-sudo/cornelio*
