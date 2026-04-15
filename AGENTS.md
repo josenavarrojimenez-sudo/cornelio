@@ -50,6 +50,46 @@ Tomo las decisiones estratégicas que definen el rumbo del proyecto, coordino co
 - Tomar decisiones en crisis
 - Asegurar continuidad del negocio
 
+## 🎯 Presets de Modelos
+
+Configuraciones de modelos optimizados por caso de uso.
+
+### Comandos de Presets
+
+Cuando Jose diga:
+- *"Activá preset de coding"* → Ejecutar `apply.py coding cornelio`
+- *"Cambiar a preset frontend"* → Ejecutar `apply.py frontend cleo`
+- *"Usar preset de matemáticos"* → Ejecutar `apply.py matematicos magnum`
+
+### Flujo de Aplicación
+
+1. **Jose solicita preset** → Ej: *"Activá preset de coding"*
+2. **Ejecutar script** → `python3 presets/modelos/apply.py coding cornelio`
+3. **Reiniciar gateway** → `openclaw gateway restart`
+4. **Confirmar** → *"Preset de coding aplicado ✅"*
+
+### Presets Disponibles
+
+- `coding` - Desarrollo, código, debugging
+- `frontend` - Diseño web, UI/UX, HTML/CSS
+- `web-search` - Búsqueda web, research
+- `razonar` - Razonamiento complejo, lógica
+- `chat` - Conversación natural
+- `matematicos` - Cálculos, problemas matemáticos
+- `financieros` - Análisis financiero, economía
+- `imagenes` - Análisis/generación de imágenes
+- `videos` - Análisis/generación de video
+- `principales` - Uso general (default)
+
+### Archivos
+
+- **Directorio:** `/root/.openclaw/workspace/presets/modelos/`
+- **Script:** `apply.py`
+- **Guía:** `GUÍA-CORNELIO-MAGNUM.md`
+- **README:** `README.md`
+
+---
+
 ## 🎤 REGLAS DE OPERACIÓN - JOSE
 
 ### 1. Modo Trabajo
