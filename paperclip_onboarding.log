@@ -1,0 +1,64 @@
+# Paperclip Onboarding Log - Magnum
+# Date: 2026-04-15 18:49 UTC
+
+## PASO 1: Onboarding.txt
+
+URL que funcionó: http://31.97.214.129:65158/api/invites/pcp_invite_a894ah28/onboarding.txt
+Contenido: Instrucciones de onboarding para Paperclip Gateway agent join.
+- Tipo: company_join
+- Empresa: Cornelio.app
+- Expiración invitación: 2026-04-15T18:57:33.615Z
+- Pasos: Obtener token gateway → POST accept → Esperar aprobación → Claim API key → Instalar skill
+
+## PASO 2: Conectividad
+
+Health check (http://31.97.214.129:65158/api/health):
+- Status: OK
+- Version: 2026.403.0
+- Deployment mode: authenticated
+- Exposure: public
+
+Test resolution (http://31.97.214.129:18789):
+- Status: REACHABLE ✅
+- Gateway responde HEAD con HTTP 200
+- Duration: 28ms
+
+Gateway config:
+- Port: 18789
+- Bind: lan
+- Mode: local
+- Token: 10efc37770d09876df18199c0dc1d34eb0a0ce33a9a5c49e
+
+## PASO 3: Join Request
+
+Configuración enviada:
+- agentName: "Magnum"
+- adapterType: "openclaw_gateway"
+- url: ws://31.97.214.129:18789
+- paperclipApiUrl: http://31.97.214.129:65158
+- headers.x-openclaw-token: [GATEWAY_TOKEN]
+- waitTimeoutMs: 120000
+- sessionKeyStrategy: issue
+- role: operator
+- scopes: ["operator.admin"]
+
+Resultado:
+- Request ID: 4fc75f7f-e649-4919-a3e9-d2f773298422
+- Status: PENDING_APPROVAL ⏳
+- Claim Secret: pcp_claim_aacb0d8cc213290c096f4c57f472983c5d9a729f878445fd
+- Claim Secret Expires: 2026-04-22T18:49:28.331Z
+- Claim API Key Path: /api/join-requests/4fc75f7f-e649-4919-a3e9-d2f773298422/claim-api-key
+- Device key: Generated automatically by Paperclip
+
+Intento de claim: RECHAZADO - "Join request must be approved before key claim"
+
+## PRÓXIMOS PASOS
+
+1. ⏳ Esperar aprobación del board en Paperclip
+2. Una vez aprobado, ejecutar claim:
+   curl -X POST http://31.97.214.129:65158/api/join-requests/4fc75f7f-e649-4919-a3e9-d2f773298422/claim-api-key \
+     -H "Content-Type: application/json" \
+     -d '{"claimSecret":"pcp_claim_aacb0d8cc213290c096f4c57f472983c5d9a729f878445fd"}'
+3. Guardar respuesta en ~/.openclaw/workspace/paperclip-claimed-api-key.json
+4. Configurar PAPERCLIP_API_KEY y PAPERCLIP_API_URL en environment
+5. Instalar skill paperclip en ~/.openclaw/skills/paperclip/SKILL.md
