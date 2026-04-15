@@ -1,0 +1,30 @@
+# Sub-repos and modules
+main/
+node_modules/
+
+# State files
+state/
+
+# Audio files (generated, too large for repo)
+media/outbound/*.ogg
+media/outbound/*.txt
+
+# Sensitive files
+cloudflare_token.txt
+paperclip_*.json
+--chat_id
+
+# OpenClaw internal
+.openclaw/
+
+# Package files
+package.json
+package-lock.json
+
+# Scripts that may contain tokens
+remote_exec.js
+remote_exec.py
+scripts/configure_paperclip.py
+scripts/paperclip_heartbeat.py
+scripts/register_agents_paperclip.py
+scripts/ssh_executor.py

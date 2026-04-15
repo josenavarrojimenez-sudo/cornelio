@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1775948000228
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1775947967477
+    },
+    "nvidia-kimi-vision": {
+      "version": "1.0.3",
+      "installedAt": 1776037567799
+    },
+    "claw-vision": {
+      "version": "1.0.0",
+      "installedAt": 1776037640394
+    },
+    "vision-bot": {
+      "version": "1.2.0",
+      "installedAt": 1776101314720
+    }
+  }
+}

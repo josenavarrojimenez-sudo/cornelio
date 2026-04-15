@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-12T08:15:39.342Z",
+  "entries": {
+    "memory:memory/2026-04-10.md:31:76": {
+      "key": "memory:memory/2026-04-10.md:31:76",
+      "path": "memory/2026-04-10.md",
+      "startLine": 31,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "4. `/root/.openclaw/workspace/scripts/configure_paperclip.py` - Paperclip config generator ### Paperslip Configuration - **Cron job activo:** Heartbeat cada 5 minutos - **Log path:** `/root/.openclaw/workspace/scripts/heartbeat.log` - **Agentes monitorea:** Cornelio + Magnum --- ## 🎵 Audio Pipeline - COMPLETED ### Documentation - **File:** `/root/.openclaw/workspace/docs/ELEVENLABS_AUDIO_PIPELINE.md` (~23KB) - **GitHub:** https://github.com/josenavarrojimenez-sudo/cornelio (branch: master) ### Configuration - **TTS Auto:** `\"inbound\"` ✅ (audio → audio, text → text) - **Voice ID:** `iwd8AcSi0Je5Quc56ezK` (IMMUTABLE) - **Format:** OGG Opus (`opus_48000_128`) - native WhatsApp - **STT Pri",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6523451279634753,
+      "maxScore": 0.6523451279634753,
+      "firstRecalledAt": "2026-04-11T07:21:25.186Z",
+      "lastRecalledAt": "2026-04-11T07:21:25.186Z",
+      "queryHashes": [
+        "33774c9a4944"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "opus-48000-128",
+        "root",
+        "openclaw",
+        "scripts",
+        "configure-paperclip.py",
+        "paperclip",
+        "config",
+        "generator"
+      ]
+    },
+    "memory:memory/2026-04-10.md:1:42": {
+      "key": "memory:memory/2026-04-10.md:1:42",
+      "path": "memory/2026-04-10.md",
+      "startLine": 1,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "# Memory Log - 2026-04-10 ## 🎉 Paperclip Installation & Configuration - COMPLETED ### VPS Access - **Host:** 31.97.214.129 (srv1443323.hstgr.cloud) - **User:** root - **Password:** `Sy1LK1AS.9B6&/0Qshm)` ✅ (confirmed working) - **SSH:** Funcional via paramiko ### Paperclip Status - **URL:** http://31.97.214.129:65158 - **Versión:** 2026.403.0 - **Estado:** ✅ Running (Docker container: paperclip-2qyt-paperclip-1) - **Admin Account:** - Email: jose.navarro.jimenez@gmail.com - Password: `yIoUqn9wp1ezBDbeBHQPCxECfG60uNtt` - **Company ID:** 44a2bc4e-bfce-420a-ba86-bf3424f43366 (Cornelio.app) ### OpenClaw Gateway Integration - **Gateway URL:** ws://localhost:18789 - **Auth Token:** `9571b",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3979892716440367,
+      "maxScore": 0.7516623398721122,
+      "firstRecalledAt": "2026-04-11T07:21:25.186Z",
+      "lastRecalledAt": "2026-04-12T08:15:39.342Z",
+      "queryHashes": [
+        "33774c9a4944",
+        "5dde3f6445df"
+      ],
+      "recallDays": [
+        "2026-04-11",
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "gateway",
+        "31.97.214.129",
+        "srv1443323.hstgr.cloud",
+        "sy1lk1as.9b6",
+        "2026.403.0",
+        "paperclip-2qyt-paperclip-1",
+        "jose.navarro.jimenez",
+        "gmail.com"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1:33": {
+      "key": "memory:memory/2026-04-11.md:1:33",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "# Memoria de Sesión - 2026-04-11 ## 🚀 LM Studio Integration Task ### Modelos Descargados por Jose - ✅ `qwen/qwen3.5-9b` → `/Users/hildavillanueva/.lmstudio/models/lmstudio-community/Qwen3.5-9B-GGUF/Qwen3.5-9B-Q4_K_M.gguf` - ✅ `zai-org/glm-4.6v-flash` → `/Users/hildavillanueva/.lmstudio/hub/models/zai-org/glm-4.6v-flash` ### Gateway URL Correcta para Agentes Paperclip - ✅ **CORRECTA:** `ws://webchat.cornelio.app:18789` - ❌ **INCORRECTA:** `ws://31.97.214.129:18789` (no reachable desde contenedor) - ❌ **INCORRECTA:** `ws://host.docker.internal:18789` (no soportado en Linux) - ❌ **INCORRECTA:** `ws://cornelio-webchat:18789` (nombre de contenedor incorrecto) - ❌ **INCORRECTA:** `ws://webchat",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.307961839212881,
+      "maxScore": 0.6762055433316915,
+      "firstRecalledAt": "2026-04-11T07:21:25.186Z",
+      "lastRecalledAt": "2026-04-12T08:15:39.342Z",
+      "queryHashes": [
+        "33774c9a4944",
+        "5dde3f6445df"
+      ],
+      "recallDays": [
+        "2026-04-11",
+        "2026-04-12"
+      ],
+      "conceptTags": [
+        "gateway",
+        "qwen/qwen3.5-9b",
+        "users/hildavillanueva",
+        "zai-org/glm-4.6v-flash",
+        "webchat.cornelio.app",
+        "31.97.214.129",
+        "host.docker.internal",
+        "cornelio-webchat"
+      ]
+    }
+  }
+}
