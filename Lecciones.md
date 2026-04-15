@@ -52,6 +52,8 @@
 | **Magnum** | `aviXFY7Zd7b9DnCUwaCh` | `/root/.openclaw/workspace-magnum/` | ✅ Activo |
 | **Flavia** | `p7AwDmKvTdoHTBuueGvP` | `/root/.openclaw/workspace-flavia/` | ✅ Activo |
 | **Cleo** | `MD6rLAhozcrmkdMZeOBt` | `/root/.openclaw/workspace-cleo/` | ✅ Activo |
+| **Prolix** | `HJZsH9Tm3FtUeJzIjWVE` | `/root/.openclaw/workspace-prolix/` | ✅ Activo |
+| **Abaco** | `kulszILr6ees0ArU8miO` | `/root/.openclaw/workspace-abaco/` | ✅ Activo |
 | **Cornelio** | `iwd8AcSi0Je5Quc56ezK` | Global (`auto: "off"`) | Script directo |
 
 **Lecciones:**
