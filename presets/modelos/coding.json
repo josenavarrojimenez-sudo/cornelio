@@ -1,0 +1,12 @@
+{
+  "name": "Coding",
+  "description": "Optimizado para desarrollo, código y debugging",
+  "models": {
+    "primary": "openrouter/moonshotai/kimi-k2.5",
+    "fallbacks": [
+      "ollama/kimi-k2.5:cloud",
+      "ollama/qwen3.5",
+      "ollama/google/gemini-3-flash-preview"
+    ]
+  }
+}

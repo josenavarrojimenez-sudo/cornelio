@@ -1,0 +1,10 @@
+{
+  "name": "Chat",
+  "description": "Optimizado para conversación natural",
+  "models": {
+    "primary": "ollama/qwen3.5",
+    "fallbacks": [
+      "openrouter/bytedance/seedance-1.5-pro"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Videos",
+  "description": "Optimizado para análisis y generación de video",
+  "models": {
+    "primary": "openrouter/google/veo-3.1",
+    "fallbacks": [
+      "openrouter/openai/sora-2-pro",
+      "openrouter/bytedance/seedance-2.0-fast",
+      "openrouter/bytedance/seedance-1-5-pro",
+      "openrouter/alibaba/wan-2.7"
+    ]
+  }
+}

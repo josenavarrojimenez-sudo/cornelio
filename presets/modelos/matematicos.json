@@ -1,0 +1,11 @@
+{
+  "name": "Matemáticos",
+  "description": "Optimizado para cálculos y problemas matemáticos",
+  "models": {
+    "primary": "openrouter/qwen/qwen3.6-plus",
+    "fallbacks": [
+      "openrouter/stepfun/step-3.5-flash",
+      "ollama/kimi-k2.5:cloud"
+    ]
+  }
+}

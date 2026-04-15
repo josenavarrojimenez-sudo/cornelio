@@ -1,0 +1,12 @@
+{
+  "name": "Principales",
+  "description": "Modelos principales para uso general",
+  "models": {
+    "primary": "ollama/glm-5.1:cloud",
+    "fallbacks": [
+      "ollama/minimax-m2.7:cloud",
+      "openrouter/stepfun/step-3.5-flash",
+      "ollama/qwen3.5"
+    ]
+  }
+}

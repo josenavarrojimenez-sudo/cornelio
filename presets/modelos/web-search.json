@@ -1,0 +1,11 @@
+{
+  "name": "Web Search",
+  "description": "Optimizado para búsqueda web y research",
+  "models": {
+    "primary": "openrouter/bytedance-seed/seed-2.0-lite",
+    "fallbacks": [
+      "ollama/kimi-k2.5:cloud",
+      "ollama/minimax-m2.5:cloud"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Razonar",
+  "description": "Optimizado para razonamiento complejo y lógica",
+  "models": {
+    "primary": "ollama/minimax-m2.5:cloud",
+    "fallbacks": [
+      "openrouter/bytedance/seedance-2.0",
+      "openrouter/stepfun/step-3.5-flash",
+      "openrouter/qwen/qwen3.6-plus"
+    ]
+  }
+}

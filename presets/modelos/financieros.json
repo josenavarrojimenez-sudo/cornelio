@@ -1,0 +1,12 @@
+{
+  "name": "Financieros",
+  "description": "Optimizado para análisis financiero y economía",
+  "models": {
+    "primary": "openrouter/qwen/qwen3.6-plus",
+    "fallbacks": [
+      "openrouter/qwen/qwen3.5-397b-a17b",
+      "ollama/kimi-k2.5:cloud",
+      "openrouter/minimax/minimax-m2.1"
+    ]
+  }
+}
