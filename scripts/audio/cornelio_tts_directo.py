@@ -68,7 +68,7 @@ def generar_audio_cornelio(texto, ruta_salida):
         # --- Boost de Volumen con FFmpeg ---
         ruta_boost = ruta_salida.replace(".ogg", "_boost.ogg")
         print(f"🔊 Aumentando volumen 1.5x...")
-        os.system(f"ffmpeg -i {ruta_salida} -filter:a 'volume=1.5' -c:a libopus -b:a 128k {ruta_boost} -y -loglevel quiet")
+        os.system(f"ffmpeg -i {ruta_salida} -filter:a 'volume=4.0' -c:a libopus -b:a 128k {ruta_boost} -y -loglevel quiet")
         if os.path.exists(ruta_boost):
             os.rename(ruta_boost, ruta_salida)
 
