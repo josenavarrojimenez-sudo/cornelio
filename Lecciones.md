@@ -254,9 +254,11 @@ curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
 - Eliminación de datos de Woods Pizza (copy accidental de Flavia)
 
 **Pendiente (Jose completar):**
-- Teléfono, dirección exacta, Instagram oficial de La Comarca
+- Teléfono, dirección exacta, horarios de las dos sedes
+- Instagram oficial de La Comarca ✅ (ya se tiene: @lacomarcarestaurante)
 - Configurar pasarela de pago OnVo (o alternativa)
-- Configurar Prolix para scrapear Instagram de La Comarca
+- Configurar Prolix para generar/subir datos de Facebook/Instagram de La Comarca al repo
+- Probar flujo completo de Arwen (pedido, pago, audio)
 
 **Lecciones:**
 1. Los bindings en `openclaw.json` son CRÍTICOS para enrutar mensajes al agente correcto
@@ -264,6 +266,46 @@ curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
 3. Siempre verificar `sessions_list` después de crear un nuevo agente para confirmar enrutamiento correcto
 4. Los agentes requieren sus propios scripts de audio independientes (aunque compartan Voice ID)
 5. Limpiar datos heredados de otros agentes (workspace isolation)
+
+---
+
+**Nota:** Actualizar este archivo después de cada tarea significativa resuelta.
+
+### 5.2 Actualización Automática de Datos desde GitHub (2026-04-16)
+
+**Patrón:** Replicar el flujo de Flavia, que actualiza datos de Woods Pizza diariamente desde el repo GitHub.
+
+**Cómo funciona Flavia:**
+- Script: `/root/.openclaw/workspace-flavia/scripts/update_woods_data.sh`
+- Cron: `0 16 * * *` (16:00 UTC = 10:00 AM Costa Rica)
+- Hace `git pull` de `https://github.com/josenavarrojimenez-sudo/restaurantes.git`
+- Copia `woods-pizza-data/` desde el repo a su workspace local
+- Ejecuta cleanup de archivos antiguos
+- Flavia lee los datos locales actualizados cada día
+
+**Implementación para Arwen:**
+- Script creado: `/root/.openclaw/workspace-arwen/scripts/update_lacomarca_data.sh`
+- Cron: `0 16 * * *` (misma hora que Flavia)
+- Hace pull del repo GitHub
+- Copia:
+  - `la-comarca/menus/menu_completo.json` → `la-comarca-data/menus/`
+  - `la-comarca/facebook/` → `la-comarca-data/facebook/` (datos scrapeados por Prolix)
+  - `la-comarca/imagenes/` → `la-comarca-data/imagenes/`
+- Logs: `/root/.openclaw/workspace-arwen/logs/lacomarca_data_update_*.log`
+- HEARTBEAT de Arwen actualizado para monitorear esta tarea diaria
+
+**Estado:** ✅ Script funcionando, cron configurado, copia de datos verificada
+
+**Lecciones:**
+1. Patrón escalable: cada agente tiene su script de `update_*_data.sh` que actualiza su propio dataset desde el repo central
+2. Datos maestros en GitHub → agents los copian localmente → agentes consumen datos locales
+3. Agenda de actualización: diaria (16:00 UTC) asegura info fresca sin cargar el repo en cada conversación
+4. Separación de responsabilidades: Prolix scrapea y sube al repo (o genera datos), agents consumen via pull
+5. Logs separados por agente facilitan debugging
+
+**Próximo paso:**
+- Configurar Prolix para que genere los datos de Facebook/Instagram y los suba al repo de GitHub (o los copie localmente)
+- Arwen ya está preparado para consumirlos automáticamente
 
 ---
 

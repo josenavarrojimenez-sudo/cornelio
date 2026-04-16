@@ -8,6 +8,7 @@
 - Check for critical system alerts (continuo)
 - Reporte ejecutivos a Jose (semanal)
 - Verificar salud de agentes activos: Flavia, Prolix, Ábaco, Cleo, Magnum, **Arwen** (diario)
+- Revisar que los scripts de actualización de datos diaria de Flavia y Arwen se ejecuten correctamente (logs)
 
 ## Magnum (Brazo Derecho)
 
@@ -17,6 +18,7 @@
 - Backup y mantenimiento preventivo (semanal)
 - Reportar bloqueos inmediatamente
 - Verificar que bindings de agentes (como Arwen) funcionen correctamente (después de cambios)
+- Revisar logs de actualización de datos de Flavia y Arwen (diario)
 
 ## Agentes Activos
 
