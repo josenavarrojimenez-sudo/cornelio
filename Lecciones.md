@@ -212,6 +212,7 @@ curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
 ## Próximas Lecciones por Documentar
 
 - [x] ✅ Corrección de binding faltante para agente Arwen (2026-04-16)
+- [x] ✅ Configuración de ChatGPT Plus/Pro como provider en OpenClaw (openai-codex) (2026-04-16)
 - [ ] Integración de agentes con Mission Control dashboard
 - [ ] Flujo de trabajo multi-agente en grupo "Los Menudos"
 - [ ] Configuración de workers para tareas asíncronas (Asterix)
@@ -306,6 +307,82 @@ curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
 **Próximo paso:**
 - Configurar Prolix para que genere los datos de Facebook/Instagram y los suba al repo de GitHub (o los copie localmente)
 - Arwen ya está preparado para consumirlos automáticamente
+
+---
+
+### 6. ChatGPT Plus/Pro como Provider en OpenClaw (openai-codex) (2026-04-16)
+
+**Problema:** Jose paga $20/mo por ChatGPT Plus y quiere usar esos modelos en OpenClaw sin pagar una API de OpenAI adicional.
+
+**Solución:** OpenClaw tiene un provider nativo `openai-codex` que usa tu suscripción de ChatGPT/Codex para acceder a modelos GPT-5.x sin costo adicional por tokens.
+
+**Video Tutoral:** Craig Hewitt - "The Free OpenClaw Setup Nobody's Talking About" (https://youtu.be/qURVA5XO84s)
+
+**Pasos de Configuración:**
+
+1. **Desactivar 2FA/MFA en la cuenta ChatGPT temporalmente** (el device code flow no lo soporta bien)
+
+2. **Correr el onboard de OpenClaw:**
+   ```bash
+   openclaw models auth login --provider openai-codex
+   ```
+   - Esto genera una URL OAuth que debes abrir en tu browser
+   - Iniciás sesión con tu cuenta ChatGPT Plus/Pro
+   - La URL de redirect apunta a `localhost:1455` — en VPS da error, pero el código queda en la URL
+   - Copiás toda la URL completa (`http://localhost:1455/auth/callback?code=...`) y la pegás en el prompt
+
+3. **Setear el modelo por defecto:**
+   ```bash
+   openclaw models set openai-codex/gpt-5.4
+   ```
+
+4. **Verificar:**
+   ```bash
+   openclaw models status --plain
+   # Debe responder: openai-codex/gpt-5.4
+   ```
+
+5. **Reiniciar gateway** (requiere autorización de Jose):
+   ```bash
+   openclaw gateway restart
+   ```
+
+**Comandos del Video (Craig Hewitt):**
+```bash
+openclaw onboard --auth-choice openai-codex
+openclaw models set openai-codex/gpt-5.3-codex
+openclaw models status --plain
+```
+
+**Modelos Disponibles con openai-codex:**
+| Model | Descripción |
+|-------|-------------|
+| `openai-codex/gpt-5.4` | GPT-5.4 (último) |
+| `openai-codex/gpt-5.4-mini` | GPT-5.4 Mini (rápido/económico) |
+| `openai-codex/gpt-5.3-codex` | GPT-5.3 Codex |
+| `openai-codex/gpt-5.3-codex-spark` | Spark (entitlement-dependent) |
+
+**Contexto:**
+- Context window nativo: 1,050,000 tokens
+- Runtime cap default: 272,000 tokens (mejor latencia y calidad)
+
+**Configuración Resultante:**
+- Auth profile: `openai-codex:jose.navarro.jimenez@gmail.com`
+- Modelo primario: `openai-codex/gpt-5.4`
+- Config guardada en: `/root/.openclaw/openclaw.json`
+
+**Lecciones:**
+1. OpenClaw tiene soporte nativo para `openai-codex` — no necesitas `gpt-proxy` externo
+2. El provider `openai/*` (API key) es separado de `openai-codex/*` (suscripción)
+3. El 2FA/MFA debe desactivarse temporalmente para el OAuth en VPS
+4. El redirect `localhost:1455` no funciona desde browser remoto, pero el código queda en la URL — copiar y pegar manualmente
+5. Después de configurar, reiniciar gateway para que todos los agentes usen el nuevo modelo
+6. Costo: $20/mo (ChatGPT Plus) vs ~$100+/mo de API de OpenAI para uso similar
+
+**Referencias:**
+- Video: https://youtu.be/qURVA5XO84s (Craig Hewitt)
+- Docs OpenClaw: `/usr/lib/node_modules/openclaw/docs/providers/openai.md`
+- GitHub Issues: openclaw/openclaw#61666 (ChatGPT Plus vs Codex OAuth docs)
 
 ---
 

@@ -24,6 +24,10 @@
     "crawl4ai": {
       "version": "1.0.0",
       "installedAt": 1776292749342
+    },
+    "extract-youtube-transcript": {
+      "version": "2.1.0",
+      "installedAt": 1776363924414
     }
   }
 }
