@@ -211,9 +211,59 @@ curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/sendVoice" \
 
 ## Próximas Lecciones por Documentar
 
+- [x] ✅ Corrección de binding faltante para agente Arwen (2026-04-16)
 - [ ] Integración de agentes con Mission Control dashboard
 - [ ] Flujo de trabajo multi-agente en grupo "Los Menudos"
 - [ ] Configuración de workers para tareas asíncronas (Asterix)
+
+## 5. Creación y Configuración de Agente Independiente (Arwen - La Comarca) (2026-04-16)
+
+**Problema:** Se creó el agente Arwen pero los mensajes de Telegram caían en Cornelio en lugar de Arwen.
+
+**Root Cause:** Arwen estaba definido en `openclaw.json` global con `id: "arwen"` y su cuenta de Telegram configurada, pero faltaba el binding que relaciona accountId "arwen" con el agentId "arwen".
+
+**Síntomas:**
+- En `sessions_list` aparecían sesiones como `agent:cornelio:telegram:arwen:...` en lugar de `agent:arwen:telegram:...`
+- Cuando Jose escribía a @ArwenBot en Telegram, respondía Cornelio en lugar de Arwen.
+
+**Solución:**
+1. Agregar binding en `/root/.openclaw/openclaw.json`:
+```json
+{
+  "agentId": "arwen",
+  "match": {
+    "channel": "telegram",
+    "accountId": "arwen"
+  }
+}
+```
+2. Reiniciar gateway (con autorización de Jose)
+3. Verificar que las nuevas sesiones aparezcan como `agent:arwen:telegram:direct:...`
+
+**Estructura de workspace creada para Arwen:**
+- `SOUL.md` – Persona como salonera de La Comarca (tema LOTR)
+- `USER.md` – Datos del restaurante (105 productos, 14 categorías temáticas)
+- `IDENTITY.md` – Nombre, vibe, emoji
+- `AGENTS.md` – Misión y responsabilidades
+- `CONFIG.md` – Configuraciones técnicas
+- `TOOLS.md` – Herramientas permitidas
+- `HEARTBEAT.md` – Tareas periódicas específicas
+- `skills.md` + `skills/arwen-restaurant-skill/SKILL.md`
+- `scripts/audio/arwen_tts_directo.py` + `arwen_enviar_audio.sh` – TTS independiente (Voice ID: crQgCQuWgUucmYHEPsrB)
+- `la-comarca-data/menus/menu_completo.json` – Menú descargado del GitHub repo
+- Eliminación de datos de Woods Pizza (copy accidental de Flavia)
+
+**Pendiente (Jose completar):**
+- Teléfono, dirección exacta, Instagram oficial de La Comarca
+- Configurar pasarela de pago OnVo (o alternativa)
+- Configurar Prolix para scrapear Instagram de La Comarca
+
+**Lecciones:**
+1. Los bindings en `openclaw.json` son CRÍTICOS para enrutar mensajes al agente correcto
+2. Sin binding, los mensajes caen en el agente por defecto (Cornelio)
+3. Siempre verificar `sessions_list` después de crear un nuevo agente para confirmar enrutamiento correcto
+4. Los agentes requieren sus propios scripts de audio independientes (aunque compartan Voice ID)
+5. Limpiar datos heredados de otros agentes (workspace isolation)
 
 ---
 

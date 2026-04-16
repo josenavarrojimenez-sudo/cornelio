@@ -7,6 +7,7 @@
 - Monitor user adoption rate (diario/semanal)
 - Check for critical system alerts (continuo)
 - Reporte ejecutivos a Jose (semanal)
+- Verificar salud de agentes activos: Flavia, Prolix, Ábaco, Cleo, Magnum, **Arwen** (diario)
 
 ## Magnum (Brazo Derecho)
 
@@ -15,6 +16,30 @@
 - Validar configuraciones de sistemas (semanal)
 - Backup y mantenimiento preventivo (semanal)
 - Reportar bloqueos inmediatamente
+- Verificar que bindings de agentes (como Arwen) funcionen correctamente (después de cambios)
+
+## Agentes Activos
+
+### Flavia (Woods Pizza & Beer Garden)
+- Monitorear respuesta de audio (que use ElevenLabs correctamente)
+- Revisar que scraping de Instagram funcione diariamente
+- Verificar integración de pago OnVo
+
+### Arwen (La Comarca)
+- Verificar que binding de Telegram funcione (ya corregido)
+- Asegurar que menú local esté actualizado
+- Pendiente: Configurar scraping de Instagram de La Comarca
+- Pendiente: Integrar pasarela de pago
+
+### Prolix (Investigación)
+- Revisar que scrapers funcionen (Woods, y futuro La Comarca)
+- Monitorear uso de tokens y costos
+
+### Ábaco (Presupuestos)
+- Validar cálculos y reportes
+
+### Cleo (Frontend)
+- Revisar despliegues de dashboard
 
 ## Agentes Futuros
 
